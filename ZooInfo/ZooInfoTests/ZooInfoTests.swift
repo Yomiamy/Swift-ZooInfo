@@ -1,14 +1,14 @@
 //
-//  ZoomInfoTests.swift
-//  ZoomInfoTests
+//  ZooInfoTests.swift
+//  ZooInfoTests
 //
-//  Created by YomiRY on 2023/11/9.
+//  Created by YomiRY on 2023/11/10.
 //
 
 import XCTest
-@testable import ZoomInfo
+@testable import ZooInfo
 
-final class ZoomInfoTests: XCTestCase {
+final class ZooInfoTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
