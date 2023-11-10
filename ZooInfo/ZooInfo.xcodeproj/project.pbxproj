@@ -7,81 +7,78 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CC2B2F652AFD341900A6D38B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2B2F642AFD341900A6D38B /* AppDelegate.swift */; };
-		CC2B2F672AFD341900A6D38B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2B2F662AFD341900A6D38B /* SceneDelegate.swift */; };
-		CC2B2F692AFD341900A6D38B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2B2F682AFD341900A6D38B /* ViewController.swift */; };
-		CC2B2F6C2AFD341900A6D38B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC2B2F6A2AFD341900A6D38B /* Main.storyboard */; };
-		CC2B2F6E2AFD341B00A6D38B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC2B2F6D2AFD341B00A6D38B /* Assets.xcassets */; };
-		CC2B2F712AFD341B00A6D38B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC2B2F6F2AFD341B00A6D38B /* LaunchScreen.storyboard */; };
-		CC2B2F7C2AFD341B00A6D38B /* ZoomInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2B2F7B2AFD341B00A6D38B /* ZoomInfoTests.swift */; };
-		CC2B2F862AFD341B00A6D38B /* ZoomInfoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2B2F852AFD341B00A6D38B /* ZoomInfoUITests.swift */; };
-		CC2B2F882AFD341B00A6D38B /* ZoomInfoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2B2F872AFD341B00A6D38B /* ZoomInfoUITestsLaunchTests.swift */; };
-		CCC638752AFD429500008F57 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = CCC638742AFD429500008F57 /* CombineMoya */; };
-		CCC638772AFD429500008F57 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = CCC638762AFD429500008F57 /* Moya */; };
-		CCC638792AFD429500008F57 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = CCC638782AFD429500008F57 /* RxMoya */; };
-		CCC6387E2AFDDA7F00008F57 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC6387C2AFDDA7700008F57 /* WebKit.framework */; };
-		CCC638822AFDDE6A00008F57 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC638812AFDDE6A00008F57 /* Api.swift */; };
-		CCC638852AFE1B5D00008F57 /* AllZooInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC638842AFE1B5D00008F57 /* AllZooInfo.swift */; };
-		CCC638872AFE1BFF00008F57 /* ZooCategoryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC638862AFE1BFF00008F57 /* ZooCategoryInfo.swift */; };
+		CC51BD382AFE5F5A00BC7402 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC51BD372AFE5F5A00BC7402 /* AppDelegate.swift */; };
+		CC51BD3A2AFE5F5A00BC7402 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC51BD392AFE5F5A00BC7402 /* SceneDelegate.swift */; };
+		CC51BD3C2AFE5F5A00BC7402 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC51BD3B2AFE5F5A00BC7402 /* ViewController.swift */; };
+		CC51BD3F2AFE5F5A00BC7402 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC51BD3D2AFE5F5A00BC7402 /* Main.storyboard */; };
+		CC51BD412AFE5F5B00BC7402 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC51BD402AFE5F5B00BC7402 /* Assets.xcassets */; };
+		CC51BD442AFE5F5B00BC7402 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC51BD422AFE5F5B00BC7402 /* LaunchScreen.storyboard */; };
+		CC51BD4F2AFE5F5C00BC7402 /* ZooInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC51BD4E2AFE5F5C00BC7402 /* ZooInfoTests.swift */; };
+		CC51BD592AFE5F5C00BC7402 /* ZooInfoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC51BD582AFE5F5C00BC7402 /* ZooInfoUITests.swift */; };
+		CC51BD5B2AFE5F5C00BC7402 /* ZooInfoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC51BD5A2AFE5F5C00BC7402 /* ZooInfoUITestsLaunchTests.swift */; };
+		CC51BD692AFE5FB600BC7402 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = CC51BD682AFE5FB600BC7402 /* CombineMoya */; };
+		CC51BD6B2AFE5FB600BC7402 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = CC51BD6A2AFE5FB600BC7402 /* Moya */; };
+		CC51BD6D2AFE5FB600BC7402 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = CC51BD6C2AFE5FB600BC7402 /* RxMoya */; };
+		CC51BD722AFE606900BC7402 /* AllZooInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC51BD712AFE606900BC7402 /* AllZooInfo.swift */; };
+		CC51BD742AFE607E00BC7402 /* ZoomCategoryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC51BD732AFE607E00BC7402 /* ZoomCategoryInfo.swift */; };
+		CC51BD772AFE60A600BC7402 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC51BD762AFE60A600BC7402 /* Api.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		CC2B2F782AFD341B00A6D38B /* PBXContainerItemProxy */ = {
+		CC51BD4B2AFE5F5C00BC7402 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = CC2B2F592AFD341900A6D38B /* Project object */;
+			containerPortal = CC51BD2C2AFE5F5A00BC7402 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CC2B2F602AFD341900A6D38B;
-			remoteInfo = ZoomInfo;
+			remoteGlobalIDString = CC51BD332AFE5F5A00BC7402;
+			remoteInfo = ZooInfo;
 		};
-		CC2B2F822AFD341B00A6D38B /* PBXContainerItemProxy */ = {
+		CC51BD552AFE5F5C00BC7402 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = CC2B2F592AFD341900A6D38B /* Project object */;
+			containerPortal = CC51BD2C2AFE5F5A00BC7402 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CC2B2F602AFD341900A6D38B;
-			remoteInfo = ZoomInfo;
+			remoteGlobalIDString = CC51BD332AFE5F5A00BC7402;
+			remoteInfo = ZooInfo;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CC2B2F612AFD341900A6D38B /* ZoomInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZoomInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CC2B2F642AFD341900A6D38B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CC2B2F662AFD341900A6D38B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CC2B2F682AFD341900A6D38B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CC2B2F6B2AFD341900A6D38B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CC2B2F6D2AFD341B00A6D38B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CC2B2F702AFD341B00A6D38B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		CC2B2F722AFD341B00A6D38B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CC2B2F772AFD341B00A6D38B /* ZoomInfoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZoomInfoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CC2B2F7B2AFD341B00A6D38B /* ZoomInfoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomInfoTests.swift; sourceTree = "<group>"; };
-		CC2B2F812AFD341B00A6D38B /* ZoomInfoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZoomInfoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CC2B2F852AFD341B00A6D38B /* ZoomInfoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomInfoUITests.swift; sourceTree = "<group>"; };
-		CC2B2F872AFD341B00A6D38B /* ZoomInfoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomInfoUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		CCC6387C2AFDDA7700008F57 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
-		CCC638812AFDDE6A00008F57 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
-		CCC638842AFE1B5D00008F57 /* AllZooInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllZooInfo.swift; sourceTree = "<group>"; };
-		CCC638862AFE1BFF00008F57 /* ZooCategoryInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooCategoryInfo.swift; sourceTree = "<group>"; };
+		CC51BD342AFE5F5A00BC7402 /* ZooInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZooInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC51BD372AFE5F5A00BC7402 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CC51BD392AFE5F5A00BC7402 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CC51BD3B2AFE5F5A00BC7402 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CC51BD3E2AFE5F5A00BC7402 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CC51BD402AFE5F5B00BC7402 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CC51BD432AFE5F5B00BC7402 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CC51BD452AFE5F5B00BC7402 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC51BD4A2AFE5F5C00BC7402 /* ZooInfoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZooInfoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC51BD4E2AFE5F5C00BC7402 /* ZooInfoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooInfoTests.swift; sourceTree = "<group>"; };
+		CC51BD542AFE5F5C00BC7402 /* ZooInfoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZooInfoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC51BD582AFE5F5C00BC7402 /* ZooInfoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooInfoUITests.swift; sourceTree = "<group>"; };
+		CC51BD5A2AFE5F5C00BC7402 /* ZooInfoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooInfoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CC51BD712AFE606900BC7402 /* AllZooInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllZooInfo.swift; sourceTree = "<group>"; };
+		CC51BD732AFE607E00BC7402 /* ZoomCategoryInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomCategoryInfo.swift; sourceTree = "<group>"; };
+		CC51BD762AFE60A600BC7402 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		CC2B2F5E2AFD341900A6D38B /* Frameworks */ = {
+		CC51BD312AFE5F5A00BC7402 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCC638792AFD429500008F57 /* RxMoya in Frameworks */,
-				CCC638772AFD429500008F57 /* Moya in Frameworks */,
-				CCC6387E2AFDDA7F00008F57 /* WebKit.framework in Frameworks */,
-				CCC638752AFD429500008F57 /* CombineMoya in Frameworks */,
+				CC51BD6D2AFE5FB600BC7402 /* RxMoya in Frameworks */,
+				CC51BD6B2AFE5FB600BC7402 /* Moya in Frameworks */,
+				CC51BD692AFE5FB600BC7402 /* CombineMoya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CC2B2F742AFD341B00A6D38B /* Frameworks */ = {
+		CC51BD472AFE5F5C00BC7402 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CC2B2F7E2AFD341B00A6D38B /* Frameworks */ = {
+		CC51BD512AFE5F5C00BC7402 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -91,178 +88,161 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CC2B2F582AFD341900A6D38B = {
+		CC51BD2B2AFE5F5A00BC7402 = {
 			isa = PBXGroup;
 			children = (
-				CC2B2F632AFD341900A6D38B /* ZoomInfo */,
-				CC2B2F7A2AFD341B00A6D38B /* ZoomInfoTests */,
-				CC2B2F842AFD341B00A6D38B /* ZoomInfoUITests */,
-				CC2B2F622AFD341900A6D38B /* Products */,
-				CCC6387B2AFDDA7700008F57 /* Frameworks */,
+				CC51BD362AFE5F5A00BC7402 /* ZooInfo */,
+				CC51BD4D2AFE5F5C00BC7402 /* ZooInfoTests */,
+				CC51BD572AFE5F5C00BC7402 /* ZooInfoUITests */,
+				CC51BD352AFE5F5A00BC7402 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		CC2B2F622AFD341900A6D38B /* Products */ = {
+		CC51BD352AFE5F5A00BC7402 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CC2B2F612AFD341900A6D38B /* ZoomInfo.app */,
-				CC2B2F772AFD341B00A6D38B /* ZoomInfoTests.xctest */,
-				CC2B2F812AFD341B00A6D38B /* ZoomInfoUITests.xctest */,
+				CC51BD342AFE5F5A00BC7402 /* ZooInfo.app */,
+				CC51BD4A2AFE5F5C00BC7402 /* ZooInfoTests.xctest */,
+				CC51BD542AFE5F5C00BC7402 /* ZooInfoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CC2B2F632AFD341900A6D38B /* ZoomInfo */ = {
+		CC51BD362AFE5F5A00BC7402 /* ZooInfo */ = {
 			isa = PBXGroup;
 			children = (
-				CCC638882AFE5C1000008F57 /* flow */,
-				CCC6387A2AFDD99500008F57 /* api */,
-				CC2B2F642AFD341900A6D38B /* AppDelegate.swift */,
-				CC2B2F662AFD341900A6D38B /* SceneDelegate.swift */,
-				CC2B2F682AFD341900A6D38B /* ViewController.swift */,
-				CC2B2F6A2AFD341900A6D38B /* Main.storyboard */,
-				CC2B2F6D2AFD341B00A6D38B /* Assets.xcassets */,
-				CC2B2F6F2AFD341B00A6D38B /* LaunchScreen.storyboard */,
-				CC2B2F722AFD341B00A6D38B /* Info.plist */,
+				CC51BD702AFE604700BC7402 /* api */,
+				CC51BD372AFE5F5A00BC7402 /* AppDelegate.swift */,
+				CC51BD392AFE5F5A00BC7402 /* SceneDelegate.swift */,
+				CC51BD3B2AFE5F5A00BC7402 /* ViewController.swift */,
+				CC51BD3D2AFE5F5A00BC7402 /* Main.storyboard */,
+				CC51BD402AFE5F5B00BC7402 /* Assets.xcassets */,
+				CC51BD422AFE5F5B00BC7402 /* LaunchScreen.storyboard */,
+				CC51BD452AFE5F5B00BC7402 /* Info.plist */,
 			);
-			path = ZoomInfo;
+			path = ZooInfo;
 			sourceTree = "<group>";
 		};
-		CC2B2F7A2AFD341B00A6D38B /* ZoomInfoTests */ = {
+		CC51BD4D2AFE5F5C00BC7402 /* ZooInfoTests */ = {
 			isa = PBXGroup;
 			children = (
-				CC2B2F7B2AFD341B00A6D38B /* ZoomInfoTests.swift */,
+				CC51BD4E2AFE5F5C00BC7402 /* ZooInfoTests.swift */,
 			);
-			path = ZoomInfoTests;
+			path = ZooInfoTests;
 			sourceTree = "<group>";
 		};
-		CC2B2F842AFD341B00A6D38B /* ZoomInfoUITests */ = {
+		CC51BD572AFE5F5C00BC7402 /* ZooInfoUITests */ = {
 			isa = PBXGroup;
 			children = (
-				CC2B2F852AFD341B00A6D38B /* ZoomInfoUITests.swift */,
-				CC2B2F872AFD341B00A6D38B /* ZoomInfoUITestsLaunchTests.swift */,
+				CC51BD582AFE5F5C00BC7402 /* ZooInfoUITests.swift */,
+				CC51BD5A2AFE5F5C00BC7402 /* ZooInfoUITestsLaunchTests.swift */,
 			);
-			path = ZoomInfoUITests;
+			path = ZooInfoUITests;
 			sourceTree = "<group>";
 		};
-		CCC6387A2AFDD99500008F57 /* api */ = {
+		CC51BD702AFE604700BC7402 /* api */ = {
 			isa = PBXGroup;
 			children = (
-				CCC638832AFE1B4000008F57 /* response */,
-				CCC638812AFDDE6A00008F57 /* Api.swift */,
+				CC51BD752AFE609600BC7402 /* response */,
+				CC51BD762AFE60A600BC7402 /* Api.swift */,
 			);
 			path = api;
 			sourceTree = "<group>";
 		};
-		CCC6387B2AFDDA7700008F57 /* Frameworks */ = {
+		CC51BD752AFE609600BC7402 /* response */ = {
 			isa = PBXGroup;
 			children = (
-				CCC6387C2AFDDA7700008F57 /* WebKit.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		CCC638832AFE1B4000008F57 /* response */ = {
-			isa = PBXGroup;
-			children = (
-				CCC638842AFE1B5D00008F57 /* AllZooInfo.swift */,
-				CCC638862AFE1BFF00008F57 /* ZooCategoryInfo.swift */,
+				CC51BD712AFE606900BC7402 /* AllZooInfo.swift */,
+				CC51BD732AFE607E00BC7402 /* ZoomCategoryInfo.swift */,
 			);
 			path = response;
-			sourceTree = "<group>";
-		};
-		CCC638882AFE5C1000008F57 /* flow */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = flow;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CC2B2F602AFD341900A6D38B /* ZoomInfo */ = {
+		CC51BD332AFE5F5A00BC7402 /* ZooInfo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CC2B2F8B2AFD341B00A6D38B /* Build configuration list for PBXNativeTarget "ZoomInfo" */;
+			buildConfigurationList = CC51BD5E2AFE5F5C00BC7402 /* Build configuration list for PBXNativeTarget "ZooInfo" */;
 			buildPhases = (
-				CC2B2F5D2AFD341900A6D38B /* Sources */,
-				CC2B2F5E2AFD341900A6D38B /* Frameworks */,
-				CC2B2F5F2AFD341900A6D38B /* Resources */,
+				CC51BD302AFE5F5A00BC7402 /* Sources */,
+				CC51BD312AFE5F5A00BC7402 /* Frameworks */,
+				CC51BD322AFE5F5A00BC7402 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = ZoomInfo;
+			name = ZooInfo;
 			packageProductDependencies = (
-				CCC638742AFD429500008F57 /* CombineMoya */,
-				CCC638762AFD429500008F57 /* Moya */,
-				CCC638782AFD429500008F57 /* RxMoya */,
+				CC51BD682AFE5FB600BC7402 /* CombineMoya */,
+				CC51BD6A2AFE5FB600BC7402 /* Moya */,
+				CC51BD6C2AFE5FB600BC7402 /* RxMoya */,
 			);
-			productName = ZoomInfo;
-			productReference = CC2B2F612AFD341900A6D38B /* ZoomInfo.app */;
+			productName = ZooInfo;
+			productReference = CC51BD342AFE5F5A00BC7402 /* ZooInfo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CC2B2F762AFD341B00A6D38B /* ZoomInfoTests */ = {
+		CC51BD492AFE5F5C00BC7402 /* ZooInfoTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CC2B2F8E2AFD341B00A6D38B /* Build configuration list for PBXNativeTarget "ZoomInfoTests" */;
+			buildConfigurationList = CC51BD612AFE5F5C00BC7402 /* Build configuration list for PBXNativeTarget "ZooInfoTests" */;
 			buildPhases = (
-				CC2B2F732AFD341B00A6D38B /* Sources */,
-				CC2B2F742AFD341B00A6D38B /* Frameworks */,
-				CC2B2F752AFD341B00A6D38B /* Resources */,
+				CC51BD462AFE5F5C00BC7402 /* Sources */,
+				CC51BD472AFE5F5C00BC7402 /* Frameworks */,
+				CC51BD482AFE5F5C00BC7402 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				CC2B2F792AFD341B00A6D38B /* PBXTargetDependency */,
+				CC51BD4C2AFE5F5C00BC7402 /* PBXTargetDependency */,
 			);
-			name = ZoomInfoTests;
-			productName = ZoomInfoTests;
-			productReference = CC2B2F772AFD341B00A6D38B /* ZoomInfoTests.xctest */;
+			name = ZooInfoTests;
+			productName = ZooInfoTests;
+			productReference = CC51BD4A2AFE5F5C00BC7402 /* ZooInfoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		CC2B2F802AFD341B00A6D38B /* ZoomInfoUITests */ = {
+		CC51BD532AFE5F5C00BC7402 /* ZooInfoUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CC2B2F912AFD341B00A6D38B /* Build configuration list for PBXNativeTarget "ZoomInfoUITests" */;
+			buildConfigurationList = CC51BD642AFE5F5C00BC7402 /* Build configuration list for PBXNativeTarget "ZooInfoUITests" */;
 			buildPhases = (
-				CC2B2F7D2AFD341B00A6D38B /* Sources */,
-				CC2B2F7E2AFD341B00A6D38B /* Frameworks */,
-				CC2B2F7F2AFD341B00A6D38B /* Resources */,
+				CC51BD502AFE5F5C00BC7402 /* Sources */,
+				CC51BD512AFE5F5C00BC7402 /* Frameworks */,
+				CC51BD522AFE5F5C00BC7402 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				CC2B2F832AFD341B00A6D38B /* PBXTargetDependency */,
+				CC51BD562AFE5F5C00BC7402 /* PBXTargetDependency */,
 			);
-			name = ZoomInfoUITests;
-			productName = ZoomInfoUITests;
-			productReference = CC2B2F812AFD341B00A6D38B /* ZoomInfoUITests.xctest */;
+			name = ZooInfoUITests;
+			productName = ZooInfoUITests;
+			productReference = CC51BD542AFE5F5C00BC7402 /* ZooInfoUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		CC2B2F592AFD341900A6D38B /* Project object */ = {
+		CC51BD2C2AFE5F5A00BC7402 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
-					CC2B2F602AFD341900A6D38B = {
+					CC51BD332AFE5F5A00BC7402 = {
 						CreatedOnToolsVersion = 15.0.1;
 					};
-					CC2B2F762AFD341B00A6D38B = {
+					CC51BD492AFE5F5C00BC7402 = {
 						CreatedOnToolsVersion = 15.0.1;
-						TestTargetID = CC2B2F602AFD341900A6D38B;
+						TestTargetID = CC51BD332AFE5F5A00BC7402;
 					};
-					CC2B2F802AFD341B00A6D38B = {
+					CC51BD532AFE5F5C00BC7402 = {
 						CreatedOnToolsVersion = 15.0.1;
-						TestTargetID = CC2B2F602AFD341900A6D38B;
+						TestTargetID = CC51BD332AFE5F5A00BC7402;
 					};
 				};
 			};
-			buildConfigurationList = CC2B2F5C2AFD341900A6D38B /* Build configuration list for PBXProject "ZoomInfo" */;
+			buildConfigurationList = CC51BD2F2AFE5F5A00BC7402 /* Build configuration list for PBXProject "ZooInfo" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -270,40 +250,40 @@
 				en,
 				Base,
 			);
-			mainGroup = CC2B2F582AFD341900A6D38B;
+			mainGroup = CC51BD2B2AFE5F5A00BC7402;
 			packageReferences = (
-				CCC638732AFD429500008F57 /* XCRemoteSwiftPackageReference "Moya" */,
+				CC51BD672AFE5FB600BC7402 /* XCRemoteSwiftPackageReference "Moya" */,
 			);
-			productRefGroup = CC2B2F622AFD341900A6D38B /* Products */;
+			productRefGroup = CC51BD352AFE5F5A00BC7402 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CC2B2F602AFD341900A6D38B /* ZoomInfo */,
-				CC2B2F762AFD341B00A6D38B /* ZoomInfoTests */,
-				CC2B2F802AFD341B00A6D38B /* ZoomInfoUITests */,
+				CC51BD332AFE5F5A00BC7402 /* ZooInfo */,
+				CC51BD492AFE5F5C00BC7402 /* ZooInfoTests */,
+				CC51BD532AFE5F5C00BC7402 /* ZooInfoUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		CC2B2F5F2AFD341900A6D38B /* Resources */ = {
+		CC51BD322AFE5F5A00BC7402 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC2B2F712AFD341B00A6D38B /* LaunchScreen.storyboard in Resources */,
-				CC2B2F6E2AFD341B00A6D38B /* Assets.xcassets in Resources */,
-				CC2B2F6C2AFD341900A6D38B /* Main.storyboard in Resources */,
+				CC51BD442AFE5F5B00BC7402 /* LaunchScreen.storyboard in Resources */,
+				CC51BD412AFE5F5B00BC7402 /* Assets.xcassets in Resources */,
+				CC51BD3F2AFE5F5A00BC7402 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CC2B2F752AFD341B00A6D38B /* Resources */ = {
+		CC51BD482AFE5F5C00BC7402 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CC2B2F7F2AFD341B00A6D38B /* Resources */ = {
+		CC51BD522AFE5F5C00BC7402 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -313,64 +293,64 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		CC2B2F5D2AFD341900A6D38B /* Sources */ = {
+		CC51BD302AFE5F5A00BC7402 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC2B2F692AFD341900A6D38B /* ViewController.swift in Sources */,
-				CC2B2F652AFD341900A6D38B /* AppDelegate.swift in Sources */,
-				CCC638872AFE1BFF00008F57 /* ZooCategoryInfo.swift in Sources */,
-				CCC638852AFE1B5D00008F57 /* AllZooInfo.swift in Sources */,
-				CCC638822AFDDE6A00008F57 /* Api.swift in Sources */,
-				CC2B2F672AFD341900A6D38B /* SceneDelegate.swift in Sources */,
+				CC51BD772AFE60A600BC7402 /* Api.swift in Sources */,
+				CC51BD722AFE606900BC7402 /* AllZooInfo.swift in Sources */,
+				CC51BD3C2AFE5F5A00BC7402 /* ViewController.swift in Sources */,
+				CC51BD382AFE5F5A00BC7402 /* AppDelegate.swift in Sources */,
+				CC51BD742AFE607E00BC7402 /* ZoomCategoryInfo.swift in Sources */,
+				CC51BD3A2AFE5F5A00BC7402 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CC2B2F732AFD341B00A6D38B /* Sources */ = {
+		CC51BD462AFE5F5C00BC7402 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC2B2F7C2AFD341B00A6D38B /* ZoomInfoTests.swift in Sources */,
+				CC51BD4F2AFE5F5C00BC7402 /* ZooInfoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CC2B2F7D2AFD341B00A6D38B /* Sources */ = {
+		CC51BD502AFE5F5C00BC7402 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC2B2F882AFD341B00A6D38B /* ZoomInfoUITestsLaunchTests.swift in Sources */,
-				CC2B2F862AFD341B00A6D38B /* ZoomInfoUITests.swift in Sources */,
+				CC51BD592AFE5F5C00BC7402 /* ZooInfoUITests.swift in Sources */,
+				CC51BD5B2AFE5F5C00BC7402 /* ZooInfoUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		CC2B2F792AFD341B00A6D38B /* PBXTargetDependency */ = {
+		CC51BD4C2AFE5F5C00BC7402 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CC2B2F602AFD341900A6D38B /* ZoomInfo */;
-			targetProxy = CC2B2F782AFD341B00A6D38B /* PBXContainerItemProxy */;
+			target = CC51BD332AFE5F5A00BC7402 /* ZooInfo */;
+			targetProxy = CC51BD4B2AFE5F5C00BC7402 /* PBXContainerItemProxy */;
 		};
-		CC2B2F832AFD341B00A6D38B /* PBXTargetDependency */ = {
+		CC51BD562AFE5F5C00BC7402 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CC2B2F602AFD341900A6D38B /* ZoomInfo */;
-			targetProxy = CC2B2F822AFD341B00A6D38B /* PBXContainerItemProxy */;
+			target = CC51BD332AFE5F5A00BC7402 /* ZooInfo */;
+			targetProxy = CC51BD552AFE5F5C00BC7402 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CC2B2F6A2AFD341900A6D38B /* Main.storyboard */ = {
+		CC51BD3D2AFE5F5A00BC7402 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CC2B2F6B2AFD341900A6D38B /* Base */,
+				CC51BD3E2AFE5F5A00BC7402 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		CC2B2F6F2AFD341B00A6D38B /* LaunchScreen.storyboard */ = {
+		CC51BD422AFE5F5B00BC7402 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CC2B2F702AFD341B00A6D38B /* Base */,
+				CC51BD432AFE5F5B00BC7402 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -378,7 +358,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		CC2B2F892AFD341B00A6D38B /* Debug */ = {
+		CC51BD5C2AFE5F5C00BC7402 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -441,7 +421,7 @@
 			};
 			name = Debug;
 		};
-		CC2B2F8A2AFD341B00A6D38B /* Release */ = {
+		CC51BD5D2AFE5F5C00BC7402 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -497,19 +477,18 @@
 			};
 			name = Release;
 		};
-		CC2B2F8C2AFD341B00A6D38B /* Debug */ = {
+		CC51BD5F2AFE5F5C00BC7402 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = H2724L9BS5;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ZoomInfo/Info.plist;
+				INFOPLIST_FILE = ZooInfo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -530,19 +509,18 @@
 			};
 			name = Debug;
 		};
-		CC2B2F8D2AFD341B00A6D38B /* Release */ = {
+		CC51BD602AFE5F5C00BC7402 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = H2724L9BS5;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ZoomInfo/Info.plist;
+				INFOPLIST_FILE = ZooInfo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -563,7 +541,7 @@
 			};
 			name = Release;
 		};
-		CC2B2F8F2AFD341B00A6D38B /* Debug */ = {
+		CC51BD622AFE5F5C00BC7402 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -574,16 +552,16 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.yomiamy.ZoomInfoTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yomi.ZooInfoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZoomInfo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ZoomInfo";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZooInfo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ZooInfo";
 			};
 			name = Debug;
 		};
-		CC2B2F902AFD341B00A6D38B /* Release */ = {
+		CC51BD632AFE5F5C00BC7402 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -594,16 +572,16 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.yomiamy.ZoomInfoTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yomi.ZooInfoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZoomInfo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ZoomInfo";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZooInfo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ZooInfo";
 			};
 			name = Release;
 		};
-		CC2B2F922AFD341B00A6D38B /* Debug */ = {
+		CC51BD652AFE5F5C00BC7402 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -612,16 +590,16 @@
 				DEVELOPMENT_TEAM = H2724L9BS5;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.yomiamy.ZoomInfoUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yomi.ZooInfoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ZoomInfo;
+				TEST_TARGET_NAME = ZooInfo;
 			};
 			name = Debug;
 		};
-		CC2B2F932AFD341B00A6D38B /* Release */ = {
+		CC51BD662AFE5F5C00BC7402 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -630,50 +608,50 @@
 				DEVELOPMENT_TEAM = H2724L9BS5;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.yomiamy.ZoomInfoUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yomi.ZooInfoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ZoomInfo;
+				TEST_TARGET_NAME = ZooInfo;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CC2B2F5C2AFD341900A6D38B /* Build configuration list for PBXProject "ZoomInfo" */ = {
+		CC51BD2F2AFE5F5A00BC7402 /* Build configuration list for PBXProject "ZooInfo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CC2B2F892AFD341B00A6D38B /* Debug */,
-				CC2B2F8A2AFD341B00A6D38B /* Release */,
+				CC51BD5C2AFE5F5C00BC7402 /* Debug */,
+				CC51BD5D2AFE5F5C00BC7402 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CC2B2F8B2AFD341B00A6D38B /* Build configuration list for PBXNativeTarget "ZoomInfo" */ = {
+		CC51BD5E2AFE5F5C00BC7402 /* Build configuration list for PBXNativeTarget "ZooInfo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CC2B2F8C2AFD341B00A6D38B /* Debug */,
-				CC2B2F8D2AFD341B00A6D38B /* Release */,
+				CC51BD5F2AFE5F5C00BC7402 /* Debug */,
+				CC51BD602AFE5F5C00BC7402 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CC2B2F8E2AFD341B00A6D38B /* Build configuration list for PBXNativeTarget "ZoomInfoTests" */ = {
+		CC51BD612AFE5F5C00BC7402 /* Build configuration list for PBXNativeTarget "ZooInfoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CC2B2F8F2AFD341B00A6D38B /* Debug */,
-				CC2B2F902AFD341B00A6D38B /* Release */,
+				CC51BD622AFE5F5C00BC7402 /* Debug */,
+				CC51BD632AFE5F5C00BC7402 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CC2B2F912AFD341B00A6D38B /* Build configuration list for PBXNativeTarget "ZoomInfoUITests" */ = {
+		CC51BD642AFE5F5C00BC7402 /* Build configuration list for PBXNativeTarget "ZooInfoUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CC2B2F922AFD341B00A6D38B /* Debug */,
-				CC2B2F932AFD341B00A6D38B /* Release */,
+				CC51BD652AFE5F5C00BC7402 /* Debug */,
+				CC51BD662AFE5F5C00BC7402 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -681,7 +659,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		CCC638732AFD429500008F57 /* XCRemoteSwiftPackageReference "Moya" */ = {
+		CC51BD672AFE5FB600BC7402 /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya.git";
 			requirement = {
@@ -692,22 +670,22 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		CCC638742AFD429500008F57 /* CombineMoya */ = {
+		CC51BD682AFE5FB600BC7402 /* CombineMoya */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CCC638732AFD429500008F57 /* XCRemoteSwiftPackageReference "Moya" */;
+			package = CC51BD672AFE5FB600BC7402 /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = CombineMoya;
 		};
-		CCC638762AFD429500008F57 /* Moya */ = {
+		CC51BD6A2AFE5FB600BC7402 /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CCC638732AFD429500008F57 /* XCRemoteSwiftPackageReference "Moya" */;
+			package = CC51BD672AFE5FB600BC7402 /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = Moya;
 		};
-		CCC638782AFD429500008F57 /* RxMoya */ = {
+		CC51BD6C2AFE5FB600BC7402 /* RxMoya */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CCC638732AFD429500008F57 /* XCRemoteSwiftPackageReference "Moya" */;
+			package = CC51BD672AFE5FB600BC7402 /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = RxMoya;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = CC2B2F592AFD341900A6D38B /* Project object */;
+	rootObject = CC51BD2C2AFE5F5A00BC7402 /* Project object */;
 }
