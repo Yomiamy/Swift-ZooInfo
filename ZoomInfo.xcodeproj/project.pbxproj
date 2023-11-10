@@ -16,6 +16,13 @@
 		CC2B2F7C2AFD341B00A6D38B /* ZoomInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2B2F7B2AFD341B00A6D38B /* ZoomInfoTests.swift */; };
 		CC2B2F862AFD341B00A6D38B /* ZoomInfoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2B2F852AFD341B00A6D38B /* ZoomInfoUITests.swift */; };
 		CC2B2F882AFD341B00A6D38B /* ZoomInfoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2B2F872AFD341B00A6D38B /* ZoomInfoUITestsLaunchTests.swift */; };
+		CCC638752AFD429500008F57 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = CCC638742AFD429500008F57 /* CombineMoya */; };
+		CCC638772AFD429500008F57 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = CCC638762AFD429500008F57 /* Moya */; };
+		CCC638792AFD429500008F57 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = CCC638782AFD429500008F57 /* RxMoya */; };
+		CCC6387E2AFDDA7F00008F57 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC6387C2AFDDA7700008F57 /* WebKit.framework */; };
+		CCC638822AFDDE6A00008F57 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC638812AFDDE6A00008F57 /* Api.swift */; };
+		CCC638852AFE1B5D00008F57 /* AllZooInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC638842AFE1B5D00008F57 /* AllZooInfo.swift */; };
+		CCC638872AFE1BFF00008F57 /* ZooCategoryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC638862AFE1BFF00008F57 /* ZooCategoryInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +56,10 @@
 		CC2B2F812AFD341B00A6D38B /* ZoomInfoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZoomInfoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC2B2F852AFD341B00A6D38B /* ZoomInfoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomInfoUITests.swift; sourceTree = "<group>"; };
 		CC2B2F872AFD341B00A6D38B /* ZoomInfoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomInfoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CCC6387C2AFDDA7700008F57 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		CCC638812AFDDE6A00008F57 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		CCC638842AFE1B5D00008F57 /* AllZooInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllZooInfo.swift; sourceTree = "<group>"; };
+		CCC638862AFE1BFF00008F57 /* ZooCategoryInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooCategoryInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +67,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCC638792AFD429500008F57 /* RxMoya in Frameworks */,
+				CCC638772AFD429500008F57 /* Moya in Frameworks */,
+				CCC6387E2AFDDA7F00008F57 /* WebKit.framework in Frameworks */,
+				CCC638752AFD429500008F57 /* CombineMoya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +98,7 @@
 				CC2B2F7A2AFD341B00A6D38B /* ZoomInfoTests */,
 				CC2B2F842AFD341B00A6D38B /* ZoomInfoUITests */,
 				CC2B2F622AFD341900A6D38B /* Products */,
+				CCC6387B2AFDDA7700008F57 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +115,7 @@
 		CC2B2F632AFD341900A6D38B /* ZoomInfo */ = {
 			isa = PBXGroup;
 			children = (
+				CCC6387A2AFDD99500008F57 /* api */,
 				CC2B2F642AFD341900A6D38B /* AppDelegate.swift */,
 				CC2B2F662AFD341900A6D38B /* SceneDelegate.swift */,
 				CC2B2F682AFD341900A6D38B /* ViewController.swift */,
@@ -127,6 +144,32 @@
 			path = ZoomInfoUITests;
 			sourceTree = "<group>";
 		};
+		CCC6387A2AFDD99500008F57 /* api */ = {
+			isa = PBXGroup;
+			children = (
+				CCC638832AFE1B4000008F57 /* response */,
+				CCC638812AFDDE6A00008F57 /* Api.swift */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
+		CCC6387B2AFDDA7700008F57 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CCC6387C2AFDDA7700008F57 /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CCC638832AFE1B4000008F57 /* response */ = {
+			isa = PBXGroup;
+			children = (
+				CCC638842AFE1B5D00008F57 /* AllZooInfo.swift */,
+				CCC638862AFE1BFF00008F57 /* ZooCategoryInfo.swift */,
+			);
+			path = response;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +186,11 @@
 			dependencies = (
 			);
 			name = ZoomInfo;
+			packageProductDependencies = (
+				CCC638742AFD429500008F57 /* CombineMoya */,
+				CCC638762AFD429500008F57 /* Moya */,
+				CCC638782AFD429500008F57 /* RxMoya */,
+			);
 			productName = ZoomInfo;
 			productReference = CC2B2F612AFD341900A6D38B /* ZoomInfo.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +263,9 @@
 				Base,
 			);
 			mainGroup = CC2B2F582AFD341900A6D38B;
+			packageReferences = (
+				CCC638732AFD429500008F57 /* XCRemoteSwiftPackageReference "Moya" */,
+			);
 			productRefGroup = CC2B2F622AFD341900A6D38B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -260,6 +311,9 @@
 			files = (
 				CC2B2F692AFD341900A6D38B /* ViewController.swift in Sources */,
 				CC2B2F652AFD341900A6D38B /* AppDelegate.swift in Sources */,
+				CCC638872AFE1BFF00008F57 /* ZooCategoryInfo.swift in Sources */,
+				CCC638852AFE1B5D00008F57 /* AllZooInfo.swift in Sources */,
+				CCC638822AFDDE6A00008F57 /* Api.swift in Sources */,
 				CC2B2F672AFD341900A6D38B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -611,6 +665,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CCC638732AFD429500008F57 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CCC638742AFD429500008F57 /* CombineMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CCC638732AFD429500008F57 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = CombineMoya;
+		};
+		CCC638762AFD429500008F57 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CCC638732AFD429500008F57 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		CCC638782AFD429500008F57 /* RxMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CCC638732AFD429500008F57 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = RxMoya;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CC2B2F592AFD341900A6D38B /* Project object */;
 }
