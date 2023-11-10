@@ -58,6 +58,7 @@
 		CC51BD712AFE606900BC7402 /* AllZooInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllZooInfo.swift; sourceTree = "<group>"; };
 		CC51BD732AFE607E00BC7402 /* ZoomCategoryInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomCategoryInfo.swift; sourceTree = "<group>"; };
 		CC51BD762AFE60A600BC7402 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		CC6F0AD82AFE9DC200EBB32D /* ZooInfo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ZooInfo.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +112,8 @@
 		CC51BD362AFE5F5A00BC7402 /* ZooInfo */ = {
 			isa = PBXGroup;
 			children = (
+				CC6F0AD82AFE9DC200EBB32D /* ZooInfo.entitlements */,
+				CC51BD782AFE61B000BC7402 /* flow */,
 				CC51BD702AFE604700BC7402 /* api */,
 				CC51BD372AFE5F5A00BC7402 /* AppDelegate.swift */,
 				CC51BD392AFE5F5A00BC7402 /* SceneDelegate.swift */,
@@ -156,6 +159,13 @@
 				CC51BD732AFE607E00BC7402 /* ZoomCategoryInfo.swift */,
 			);
 			path = response;
+			sourceTree = "<group>";
+		};
+		CC51BD782AFE61B000BC7402 /* flow */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = flow;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -482,11 +492,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_ENTITLEMENTS = ZooInfo/ZooInfo.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = H2724L9BS5;
+				DEVELOPMENT_TEAM = H2724L9BS5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ZooInfo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -502,7 +512,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yomi.zoo-info";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = ios_zooinfo_development;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -514,11 +523,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_ENTITLEMENTS = ZooInfo/ZooInfo.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = H2724L9BS5;
+				DEVELOPMENT_TEAM = H2724L9BS5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ZooInfo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -534,7 +543,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yomi.zoo-info";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = ios_zooinfo_development;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
