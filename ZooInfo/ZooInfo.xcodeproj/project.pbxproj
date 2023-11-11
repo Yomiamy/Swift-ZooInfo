@@ -25,6 +25,8 @@
 		CCCE2B572AFF3E8400AD33BB /* ZooCategoryItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCE2B552AFF3E8400AD33BB /* ZooCategoryItemCell.swift */; };
 		CCCE2B582AFF3E8400AD33BB /* ZooCategoryItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCCE2B562AFF3E8400AD33BB /* ZooCategoryItemCell.xib */; };
 		CCCE2B5B2AFF3E9400AD33BB /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = CCCE2B5A2AFF3E9400AD33BB /* Kingfisher */; };
+		CCCE2B5D2AFF813200AD33BB /* ZooCategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCE2B5C2AFF813200AD33BB /* ZooCategoryViewModel.swift */; };
+		CCCE2B5F2AFF814200AD33BB /* ZooCategoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCE2B5E2AFF814200AD33BB /* ZooCategoryRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		CCCE2B532AFF3D5B00AD33BB /* ZooCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooCategoryViewController.swift; sourceTree = "<group>"; };
 		CCCE2B552AFF3E8400AD33BB /* ZooCategoryItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooCategoryItemCell.swift; sourceTree = "<group>"; };
 		CCCE2B562AFF3E8400AD33BB /* ZooCategoryItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZooCategoryItemCell.xib; sourceTree = "<group>"; };
+		CCCE2B5C2AFF813200AD33BB /* ZooCategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooCategoryViewModel.swift; sourceTree = "<group>"; };
+		CCCE2B5E2AFF814200AD33BB /* ZooCategoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooCategoryRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,7 @@
 				CC51BD6D2AFE5FB600BC7402 /* RxMoya in Frameworks */,
 				CC51BD6B2AFE5FB600BC7402 /* Moya in Frameworks */,
 				CC51BD692AFE5FB600BC7402 /* CombineMoya in Frameworks */,
+				CCCE2B622AFF884400AD33BB /* ETBinding in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

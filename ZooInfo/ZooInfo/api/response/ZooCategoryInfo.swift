@@ -39,4 +39,26 @@ struct ZooCategoryInfoItem: Codable {
         case eGeo = "e_geo"
         case eURL = "e_url"
     }
+    
+    func copyWith(
+            newId: Int,
+            neweNo: String,
+            neweCategory: String,
+            neweName: String,
+            newPicURL: String,
+            neweInfo: String,
+            neweMemo: String,
+            newGeo: String,
+            newURL: String
+        ) -> ZooCategoryInfoItem {
+            return ZooCategoryInfoItem(id: newId
+                                       , eNo: neweNo
+                                       , eCategory: neweCategory
+                                       , eName: neweName
+                                       , ePicURL: newPicURL
+                                       , eInfo: neweInfo
+                                       , eMemo: neweMemo
+                                       , eGeo: newGeo
+                                       , eURL: newURL)
+        }
 }
