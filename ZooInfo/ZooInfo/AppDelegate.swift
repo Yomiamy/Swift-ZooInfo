@@ -10,10 +10,17 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        UINavigationBar.appearance().prefersLargeTitles = true
+        UINavigationBar.appearance().barTintColor = UIColor.systemBrown
+        UINavigationBar.appearance().backgroundColor = UIColor.white
+        
+        UITabBar.appearance().tintColor = UIColor.white
+        UITabBar.appearance().barTintColor = UIColor.systemBrown
+        UITabBar.appearance().backgroundColor = UIColor.systemBrown
+        
         return true
     }
 
