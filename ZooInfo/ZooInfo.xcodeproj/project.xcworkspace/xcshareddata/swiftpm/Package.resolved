@@ -10,6 +10,24 @@
       }
     },
     {
+      "identity" : "etbinding",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/EtneteraMobile/ETBinding",
+      "state" : {
+        "revision" : "92500ab3b5d972fe8282478273b2cec0cb828d0a",
+        "version" : "3.4.0"
+      }
+    },
+    {
+      "identity" : "kingfisher",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/onevcat/Kingfisher",
+      "state" : {
+        "revision" : "277f1ab2c6664b19b4a412e32b094b201e2d5757",
+        "version" : "7.10.0"
+      }
+    },
+    {
       "identity" : "moya",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Moya/Moya.git",
