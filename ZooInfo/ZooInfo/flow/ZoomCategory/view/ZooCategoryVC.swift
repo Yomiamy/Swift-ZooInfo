@@ -17,6 +17,7 @@ class ZooCategoryVC: UIViewController {
     
     private let viewMode: ZooCategoryViewModel = ZooCategoryViewModel()
     private var zooCategoryItems: [ZooCategoryInfoItem] = []
+    private let refreshController: UIRefreshControl = UIRefreshControl()
     
 
     override func viewDidLoad() {
@@ -24,7 +25,7 @@ class ZooCategoryVC: UIViewController {
         
         initView()
         initObserver()
-        initData()
+        initData(isReload: false)
     }
     
     private func initView() {
@@ -33,6 +34,10 @@ class ZooCategoryVC: UIViewController {
         self.loadingIndicatorView.style = .large
         self.loadingIndicatorView.startAnimating()
         
+        self.refreshController.attributedTitle = NSAttributedString(string:  "刷新中...")
+        self.refreshController.addTarget(self, action: #selector(reload), for: .valueChanged)
+        
+        self.zooCategoryTableView.addSubview(refreshController)
         self.zooCategoryTableView.register(UINib(nibName: "\(ZooCategoryItemCell.self)", bundle: nil), forCellReuseIdentifier: ZooCategoryVC.CELL_ID)
         self.zooCategoryTableView.dataSource = self
         self.zooCategoryTableView.delegate = self
@@ -41,6 +46,7 @@ class ZooCategoryVC: UIViewController {
     private func initObserver() {
         self.viewMode.zooCategoryItems.observe(owner: self) { (zooCategoryItems:[ZooCategoryInfoItem]?) in
             self.loadingIndicatorView.isHidden = true
+            self.refreshController.endRefreshing()
             
             guard zooCategoryItems != nil else {
                 print("zooCategoryItems is nil")
@@ -53,6 +59,7 @@ class ZooCategoryVC: UIViewController {
         
         self.viewMode.error.observe(owner: self) { errorTuple in
             self.loadingIndicatorView.isHidden = true
+            self.refreshController.endRefreshing()
             
             guard errorTuple != nil else {
                 return
@@ -64,9 +71,18 @@ class ZooCategoryVC: UIViewController {
         }
     }
     
-    private func initData() {
-        self.loadingIndicatorView.isHidden = false
+    private func initData(isReload: Bool) {
+        if(!isReload) {
+            self.loadingIndicatorView.isHidden = false
+            
+        }
         self.viewMode.fetchZooCategory()
+    }
+    
+    @objc private func reload() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            self.initData(isReload: true)
+        }
     }
 }
 
