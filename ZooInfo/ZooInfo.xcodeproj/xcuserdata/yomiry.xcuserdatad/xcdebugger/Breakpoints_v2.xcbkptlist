@@ -71,33 +71,64 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "DC093596-599A-405F-A3EA-4FE6E640CAE5"
+            uuid = "27AA0AD7-357E-4C0C-8222-3CFDA0A8AB7C"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ZooInfo/flow/view/ZooCategoryViewController.swift"
+            filePath = "ZooInfo/flow/viewmodel/ZooCategoryViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "viewDidAppear(_:)"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "fetchZooCategory()"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "BF56045F-734E-4EA9-9E2B-36D51BB226B5"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ZooInfo/flow/view/ZooCategoryViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "viewDidDisappear(_:)"
-            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "27AA0AD7-357E-4C0C-8222-3CFDA0A8AB7C - 44ddc0f11e21d723"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ZooInfo.ZooCategoryViewModel.fetchZooCategory() -&gt; ()"
+                  moduleName = "ZooInfo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yomiry/XCode/ZooInfo/ZooInfo/ZooInfo/flow/viewmodel/ZooCategoryViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "120">
+               </Location>
+               <Location
+                  uuid = "27AA0AD7-357E-4C0C-8222-3CFDA0A8AB7C - f8424c4fa5217f9f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;ZooInfo.ZooCategoryInfoItem&gt;&gt;) -&gt; () in ZooInfo.ZooCategoryViewModel.fetchZooCategory() -&gt; ()"
+                  moduleName = "ZooInfo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yomiry/XCode/ZooInfo/ZooInfo/ZooInfo/flow/viewmodel/ZooCategoryViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "27AA0AD7-357E-4C0C-8222-3CFDA0A8AB7C - a2eb89b984000ba4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Moya.MoyaError) -&gt; () in ZooInfo.ZooCategoryViewModel.fetchZooCategory() -&gt; ()"
+                  moduleName = "ZooInfo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yomiry/XCode/ZooInfo/ZooInfo/ZooInfo/flow/viewmodel/ZooCategoryViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "84">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -10,6 +10,15 @@
       }
     },
     {
+      "identity" : "etbinding",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/EtneteraMobile/ETBinding",
+      "state" : {
+        "revision" : "92500ab3b5d972fe8282478273b2cec0cb828d0a",
+        "version" : "3.4.0"
+      }
+    },
+    {
       "identity" : "kingfisher",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/onevcat/Kingfisher",

@@ -21,12 +21,13 @@
 		CC51BD722AFE606900BC7402 /* AllZooInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC51BD712AFE606900BC7402 /* AllZooInfo.swift */; };
 		CC51BD742AFE607E00BC7402 /* ZooCategoryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC51BD732AFE607E00BC7402 /* ZooCategoryInfo.swift */; };
 		CC51BD772AFE60A600BC7402 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC51BD762AFE60A600BC7402 /* Api.swift */; };
-		CCCE2B542AFF3D5B00AD33BB /* ZooCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCE2B532AFF3D5B00AD33BB /* ZooCategoryViewController.swift */; };
+		CCCE2B542AFF3D5B00AD33BB /* ZooCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCE2B532AFF3D5B00AD33BB /* ZooCategoryVC.swift */; };
 		CCCE2B572AFF3E8400AD33BB /* ZooCategoryItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCE2B552AFF3E8400AD33BB /* ZooCategoryItemCell.swift */; };
 		CCCE2B582AFF3E8400AD33BB /* ZooCategoryItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCCE2B562AFF3E8400AD33BB /* ZooCategoryItemCell.xib */; };
 		CCCE2B5B2AFF3E9400AD33BB /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = CCCE2B5A2AFF3E9400AD33BB /* Kingfisher */; };
 		CCCE2B5D2AFF813200AD33BB /* ZooCategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCE2B5C2AFF813200AD33BB /* ZooCategoryViewModel.swift */; };
 		CCCE2B5F2AFF814200AD33BB /* ZooCategoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCE2B5E2AFF814200AD33BB /* ZooCategoryRepository.swift */; };
+		CCCE2B622AFF884400AD33BB /* ETBinding in Frameworks */ = {isa = PBXBuildFile; productRef = CCCE2B612AFF884400AD33BB /* ETBinding */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +65,7 @@
 		CC51BD732AFE607E00BC7402 /* ZooCategoryInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooCategoryInfo.swift; sourceTree = "<group>"; };
 		CC51BD762AFE60A600BC7402 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		CC6F0AD82AFE9DC200EBB32D /* ZooInfo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ZooInfo.entitlements; sourceTree = "<group>"; };
-		CCCE2B532AFF3D5B00AD33BB /* ZooCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooCategoryViewController.swift; sourceTree = "<group>"; };
+		CCCE2B532AFF3D5B00AD33BB /* ZooCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooCategoryVC.swift; sourceTree = "<group>"; };
 		CCCE2B552AFF3E8400AD33BB /* ZooCategoryItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooCategoryItemCell.swift; sourceTree = "<group>"; };
 		CCCE2B562AFF3E8400AD33BB /* ZooCategoryItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZooCategoryItemCell.xib; sourceTree = "<group>"; };
 		CCCE2B5C2AFF813200AD33BB /* ZooCategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooCategoryViewModel.swift; sourceTree = "<group>"; };
@@ -125,12 +126,11 @@
 			isa = PBXGroup;
 			children = (
 				CC6F0AD82AFE9DC200EBB32D /* ZooInfo.entitlements */,
-				CC51BD702AFE604700BC7402 /* api */,
-				CC51BD782AFE61B000BC7402 /* flow */,
+				CC51BD702AFE604700BC7402 /* Api */,
+				CC51BD782AFE61B000BC7402 /* Flow */,
 				CC51BD372AFE5F5A00BC7402 /* AppDelegate.swift */,
 				CC51BD392AFE5F5A00BC7402 /* SceneDelegate.swift */,
 				CC51BD3B2AFE5F5A00BC7402 /* ViewController.swift */,
-				CC51BD3D2AFE5F5A00BC7402 /* Main.storyboard */,
 				CC51BD402AFE5F5B00BC7402 /* Assets.xcassets */,
 				CC51BD422AFE5F5B00BC7402 /* LaunchScreen.storyboard */,
 				CC51BD452AFE5F5B00BC7402 /* Info.plist */,
@@ -155,13 +155,13 @@
 			path = ZooInfoUITests;
 			sourceTree = "<group>";
 		};
-		CC51BD702AFE604700BC7402 /* api */ = {
+		CC51BD702AFE604700BC7402 /* Api */ = {
 			isa = PBXGroup;
 			children = (
 				CC51BD752AFE609600BC7402 /* response */,
 				CC51BD762AFE60A600BC7402 /* Api.swift */,
 			);
-			path = api;
+			path = Api;
 			sourceTree = "<group>";
 		};
 		CC51BD752AFE609600BC7402 /* response */ = {
@@ -173,19 +173,19 @@
 			path = response;
 			sourceTree = "<group>";
 		};
-		CC51BD782AFE61B000BC7402 /* flow */ = {
+		CC51BD782AFE61B000BC7402 /* Flow */ = {
 			isa = PBXGroup;
 			children = (
-				CCCE2B522AFF3D3700AD33BB /* view */,
-				CCCE2B512AFF3D3000AD33BB /* viewmodel */,
-				CCCE2B502AFF3D2900AD33BB /* repository */,
+				CC51BD3D2AFE5F5A00BC7402 /* Main.storyboard */,
+				CCCE2B632AFFDB3100AD33BB /* ZoomCategory */,
 			);
-			path = flow;
+			path = Flow;
 			sourceTree = "<group>";
 		};
 		CCCE2B502AFF3D2900AD33BB /* repository */ = {
 			isa = PBXGroup;
 			children = (
+				CCCE2B5E2AFF814200AD33BB /* ZooCategoryRepository.swift */,
 			);
 			path = repository;
 			sourceTree = "<group>";
@@ -193,6 +193,7 @@
 		CCCE2B512AFF3D3000AD33BB /* viewmodel */ = {
 			isa = PBXGroup;
 			children = (
+				CCCE2B5C2AFF813200AD33BB /* ZooCategoryViewModel.swift */,
 			);
 			path = viewmodel;
 			sourceTree = "<group>";
@@ -200,11 +201,21 @@
 		CCCE2B522AFF3D3700AD33BB /* view */ = {
 			isa = PBXGroup;
 			children = (
-				CCCE2B532AFF3D5B00AD33BB /* ZooCategoryViewController.swift */,
+				CCCE2B532AFF3D5B00AD33BB /* ZooCategoryVC.swift */,
 				CCCE2B552AFF3E8400AD33BB /* ZooCategoryItemCell.swift */,
 				CCCE2B562AFF3E8400AD33BB /* ZooCategoryItemCell.xib */,
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		CCCE2B632AFFDB3100AD33BB /* ZoomCategory */ = {
+			isa = PBXGroup;
+			children = (
+				CCCE2B522AFF3D3700AD33BB /* view */,
+				CCCE2B512AFF3D3000AD33BB /* viewmodel */,
+				CCCE2B502AFF3D2900AD33BB /* repository */,
+			);
+			path = ZoomCategory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,6 +239,7 @@
 				CC51BD6A2AFE5FB600BC7402 /* Moya */,
 				CC51BD6C2AFE5FB600BC7402 /* RxMoya */,
 				CCCE2B5A2AFF3E9400AD33BB /* Kingfisher */,
+				CCCE2B612AFF884400AD33BB /* ETBinding */,
 			);
 			productName = ZooInfo;
 			productReference = CC51BD342AFE5F5A00BC7402 /* ZooInfo.app */;
@@ -304,6 +316,7 @@
 			packageReferences = (
 				CC51BD672AFE5FB600BC7402 /* XCRemoteSwiftPackageReference "Moya" */,
 				CCCE2B592AFF3E9400AD33BB /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				CCCE2B602AFF884400AD33BB /* XCRemoteSwiftPackageReference "ETBinding" */,
 			);
 			productRefGroup = CC51BD352AFE5F5A00BC7402 /* Products */;
 			projectDirPath = "";
@@ -350,12 +363,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC51BD772AFE60A600BC7402 /* Api.swift in Sources */,
-				CCCE2B542AFF3D5B00AD33BB /* ZooCategoryViewController.swift in Sources */,
+				CCCE2B542AFF3D5B00AD33BB /* ZooCategoryVC.swift in Sources */,
 				CC51BD722AFE606900BC7402 /* AllZooInfo.swift in Sources */,
 				CC51BD382AFE5F5A00BC7402 /* AppDelegate.swift in Sources */,
 				CC51BD742AFE607E00BC7402 /* ZooCategoryInfo.swift in Sources */,
+				CCCE2B5F2AFF814200AD33BB /* ZooCategoryRepository.swift in Sources */,
 				CCCE2B572AFF3E8400AD33BB /* ZooCategoryItemCell.swift in Sources */,
 				CC51BD3A2AFE5F5A00BC7402 /* SceneDelegate.swift in Sources */,
+				CCCE2B5D2AFF813200AD33BB /* ZooCategoryViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -730,6 +745,14 @@
 				minimumVersion = 7.10.0;
 			};
 		};
+		CCCE2B602AFF884400AD33BB /* XCRemoteSwiftPackageReference "ETBinding" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/EtneteraMobile/ETBinding";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.4.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -752,6 +775,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CCCE2B592AFF3E9400AD33BB /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		CCCE2B612AFF884400AD33BB /* ETBinding */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CCCE2B602AFF884400AD33BB /* XCRemoteSwiftPackageReference "ETBinding" */;
+			productName = ETBinding;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
