@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		CC51BD382AFE5F5A00BC7402 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC51BD372AFE5F5A00BC7402 /* AppDelegate.swift */; };
 		CC51BD3A2AFE5F5A00BC7402 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC51BD392AFE5F5A00BC7402 /* SceneDelegate.swift */; };
-		CC51BD3C2AFE5F5A00BC7402 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC51BD3B2AFE5F5A00BC7402 /* ViewController.swift */; };
 		CC51BD3F2AFE5F5A00BC7402 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC51BD3D2AFE5F5A00BC7402 /* Main.storyboard */; };
 		CC51BD412AFE5F5B00BC7402 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC51BD402AFE5F5B00BC7402 /* Assets.xcassets */; };
 		CC51BD442AFE5F5B00BC7402 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC51BD422AFE5F5B00BC7402 /* LaunchScreen.storyboard */; };
@@ -20,8 +19,12 @@
 		CC51BD6B2AFE5FB600BC7402 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = CC51BD6A2AFE5FB600BC7402 /* Moya */; };
 		CC51BD6D2AFE5FB600BC7402 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = CC51BD6C2AFE5FB600BC7402 /* RxMoya */; };
 		CC51BD722AFE606900BC7402 /* AllZooInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC51BD712AFE606900BC7402 /* AllZooInfo.swift */; };
-		CC51BD742AFE607E00BC7402 /* ZoomCategoryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC51BD732AFE607E00BC7402 /* ZoomCategoryInfo.swift */; };
+		CC51BD742AFE607E00BC7402 /* ZooCategoryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC51BD732AFE607E00BC7402 /* ZooCategoryInfo.swift */; };
 		CC51BD772AFE60A600BC7402 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC51BD762AFE60A600BC7402 /* Api.swift */; };
+		CCCE2B542AFF3D5B00AD33BB /* ZooCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCE2B532AFF3D5B00AD33BB /* ZooCategoryViewController.swift */; };
+		CCCE2B572AFF3E8400AD33BB /* ZooCategoryItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCE2B552AFF3E8400AD33BB /* ZooCategoryItemCell.swift */; };
+		CCCE2B582AFF3E8400AD33BB /* ZooCategoryItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCCE2B562AFF3E8400AD33BB /* ZooCategoryItemCell.xib */; };
+		CCCE2B5B2AFF3E9400AD33BB /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = CCCE2B5A2AFF3E9400AD33BB /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,9 +59,12 @@
 		CC51BD582AFE5F5C00BC7402 /* ZooInfoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooInfoUITests.swift; sourceTree = "<group>"; };
 		CC51BD5A2AFE5F5C00BC7402 /* ZooInfoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooInfoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CC51BD712AFE606900BC7402 /* AllZooInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllZooInfo.swift; sourceTree = "<group>"; };
-		CC51BD732AFE607E00BC7402 /* ZoomCategoryInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomCategoryInfo.swift; sourceTree = "<group>"; };
+		CC51BD732AFE607E00BC7402 /* ZooCategoryInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooCategoryInfo.swift; sourceTree = "<group>"; };
 		CC51BD762AFE60A600BC7402 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		CC6F0AD82AFE9DC200EBB32D /* ZooInfo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ZooInfo.entitlements; sourceTree = "<group>"; };
+		CCCE2B532AFF3D5B00AD33BB /* ZooCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooCategoryViewController.swift; sourceTree = "<group>"; };
+		CCCE2B552AFF3E8400AD33BB /* ZooCategoryItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooCategoryItemCell.swift; sourceTree = "<group>"; };
+		CCCE2B562AFF3E8400AD33BB /* ZooCategoryItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZooCategoryItemCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCCE2B5B2AFF3E9400AD33BB /* Kingfisher in Frameworks */,
 				CC51BD6D2AFE5FB600BC7402 /* RxMoya in Frameworks */,
 				CC51BD6B2AFE5FB600BC7402 /* Moya in Frameworks */,
 				CC51BD692AFE5FB600BC7402 /* CombineMoya in Frameworks */,
@@ -156,7 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				CC51BD712AFE606900BC7402 /* AllZooInfo.swift */,
-				CC51BD732AFE607E00BC7402 /* ZoomCategoryInfo.swift */,
+				CC51BD732AFE607E00BC7402 /* ZooCategoryInfo.swift */,
 			);
 			path = response;
 			sourceTree = "<group>";
@@ -164,8 +171,35 @@
 		CC51BD782AFE61B000BC7402 /* flow */ = {
 			isa = PBXGroup;
 			children = (
+				CCCE2B522AFF3D3700AD33BB /* view */,
+				CCCE2B512AFF3D3000AD33BB /* viewmodel */,
+				CCCE2B502AFF3D2900AD33BB /* repository */,
 			);
 			path = flow;
+			sourceTree = "<group>";
+		};
+		CCCE2B502AFF3D2900AD33BB /* repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = repository;
+			sourceTree = "<group>";
+		};
+		CCCE2B512AFF3D3000AD33BB /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = viewmodel;
+			sourceTree = "<group>";
+		};
+		CCCE2B522AFF3D3700AD33BB /* view */ = {
+			isa = PBXGroup;
+			children = (
+				CCCE2B532AFF3D5B00AD33BB /* ZooCategoryViewController.swift */,
+				CCCE2B552AFF3E8400AD33BB /* ZooCategoryItemCell.swift */,
+				CCCE2B562AFF3E8400AD33BB /* ZooCategoryItemCell.xib */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +222,7 @@
 				CC51BD682AFE5FB600BC7402 /* CombineMoya */,
 				CC51BD6A2AFE5FB600BC7402 /* Moya */,
 				CC51BD6C2AFE5FB600BC7402 /* RxMoya */,
+				CCCE2B5A2AFF3E9400AD33BB /* Kingfisher */,
 			);
 			productName = ZooInfo;
 			productReference = CC51BD342AFE5F5A00BC7402 /* ZooInfo.app */;
@@ -263,6 +298,7 @@
 			mainGroup = CC51BD2B2AFE5F5A00BC7402;
 			packageReferences = (
 				CC51BD672AFE5FB600BC7402 /* XCRemoteSwiftPackageReference "Moya" */,
+				CCCE2B592AFF3E9400AD33BB /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = CC51BD352AFE5F5A00BC7402 /* Products */;
 			projectDirPath = "";
@@ -281,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC51BD442AFE5F5B00BC7402 /* LaunchScreen.storyboard in Resources */,
+				CCCE2B582AFF3E8400AD33BB /* ZooCategoryItemCell.xib in Resources */,
 				CC51BD412AFE5F5B00BC7402 /* Assets.xcassets in Resources */,
 				CC51BD3F2AFE5F5A00BC7402 /* Main.storyboard in Resources */,
 			);
@@ -307,11 +344,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC6F0AE02AFF2ABC00EBB32D /* ZooCategoryViewController.swift in Sources */,
 				CC51BD772AFE60A600BC7402 /* Api.swift in Sources */,
+				CCCE2B542AFF3D5B00AD33BB /* ZooCategoryViewController.swift in Sources */,
 				CC51BD722AFE606900BC7402 /* AllZooInfo.swift in Sources */,
 				CC51BD382AFE5F5A00BC7402 /* AppDelegate.swift in Sources */,
-				CC51BD742AFE607E00BC7402 /* ZoomCategoryInfo.swift in Sources */,
+				CC51BD742AFE607E00BC7402 /* ZooCategoryInfo.swift in Sources */,
+				CCCE2B572AFF3E8400AD33BB /* ZooCategoryItemCell.swift in Sources */,
 				CC51BD3A2AFE5F5A00BC7402 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -679,6 +717,14 @@
 				minimumVersion = 15.0.3;
 			};
 		};
+		CCCE2B592AFF3E9400AD33BB /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.10.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -696,6 +742,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CC51BD672AFE5FB600BC7402 /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = RxMoya;
+		};
+		CCCE2B5A2AFF3E9400AD33BB /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CCCE2B592AFF3E9400AD33BB /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -1,23 +1,23 @@
 //
 //  ZooCategoryInfo.swift
-//  ZoomInfo
+//  ZooInfo
 //
 //  Created by YomiRY on 2023/11/10.
 //
 
-struct ZoomCategoryInfo: Codable {
-    let result: ZoomCategoryInfoResult
+struct ZooCategoryInfo: Codable {
+    let result: ZooCategoryInfoResult
 }
 
-struct ZoomCategoryInfoResult: Codable {
+struct ZooCategoryInfoResult: Codable {
     let limit: Int
     let offset: Int
     let count: Int
     let sort: String
-    let results: [ZoomCategoryInfoItem]
+    let results: [ZooCategoryInfoItem]
 }
 
-struct ZoomCategoryInfoItem: Codable {
+struct ZooCategoryInfoItem: Codable {
     let id: Int
     let eNo: String
     let eCategory: String

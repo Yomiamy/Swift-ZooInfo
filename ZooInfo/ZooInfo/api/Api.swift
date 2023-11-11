@@ -1,6 +1,6 @@
 //
 //  Api.swift
-//  ZoomInfo
+//  ZooInfo
 //
 //  Created by YomiRY on 2023/11/10.
 //
@@ -8,14 +8,14 @@
 import Moya
 import Foundation
 
-let ApiProvider = MoyaProvider<Zoom>()
+let ApiProvider = MoyaProvider<Zoo>()
 
-public enum Zoom {
+public enum Zoo {
     case fetchCategoryInfo
-    case fetchAllZoomInfo
+    case fetchAllZooInfo
 }
 
-extension Zoom: TargetType {
+extension Zoo: TargetType {
     public var baseURL: URL {
         URL(string: "https://data.taipei")!
     }
@@ -24,7 +24,7 @@ extension Zoom: TargetType {
         switch(self) {
         case .fetchCategoryInfo:
             return "/api/v1/dataset/5a0e5fbb-72f8-41c6-908e-2fb25eff9b8a"
-        case .fetchAllZoomInfo:
+        case .fetchAllZooInfo:
             return "/api/v1/dataset/a3e2b221-75e0-45c1-8f97-75acbd43d613"
         }
     }
@@ -37,7 +37,7 @@ extension Zoom: TargetType {
         switch(self) {
         case .fetchCategoryInfo:
             return .requestParameters(parameters: ["scope": "resourceAquire"], encoding: URLEncoding.queryString)
-        case .fetchAllZoomInfo:
+        case .fetchAllZooInfo:
             return .requestParameters(parameters: ["scope": "resourceAquire", "limit":1000], encoding: URLEncoding.queryString)
         }
     }
