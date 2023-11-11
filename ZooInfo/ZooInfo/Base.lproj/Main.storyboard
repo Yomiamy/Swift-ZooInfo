@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SFQ-1E-Ts2">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -70,56 +71,33 @@
         <!--ZooCategoryInfoViewController-->
         <scene sceneID="7bn-G7-gVt">
             <objects>
-                <viewController id="Fpu-uj-qmQ" userLabel="ZooCategoryInfoViewController" sceneMemberID="viewController">
+                <viewController id="Fpu-uj-qmQ" userLabel="ZooCategoryInfoViewController" customClass="ZooCategoryViewController" customModule="ZooInfo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8nx-Kz-tx3">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTe-VG-ESw">
-                                <rect key="frame" x="175.66666666666666" y="425.66666666666669" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVG-O6-nCX">
-                                <rect key="frame" x="159" y="493" width="75" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                <connections>
-                                    <segue destination="Iu9-Vk-GYc" kind="show" id="PJp-Pd-bhV"/>
-                                </connections>
-                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gl7-0q-BU1" userLabel="zooCategoryTableView">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4qR-Af-tM4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="BTe-VG-ESw" firstAttribute="centerY" secondItem="4qR-Af-tM4" secondAttribute="centerY" id="1vA-Ft-X5m"/>
-                            <constraint firstItem="tVG-O6-nCX" firstAttribute="centerX" secondItem="BTe-VG-ESw" secondAttribute="centerX" id="3Bi-UX-Smm"/>
-                            <constraint firstItem="BTe-VG-ESw" firstAttribute="centerX" secondItem="4qR-Af-tM4" secondAttribute="centerX" id="ZlH-QG-2Yp"/>
-                            <constraint firstItem="tVG-O6-nCX" firstAttribute="top" secondItem="BTe-VG-ESw" secondAttribute="bottom" constant="46.333333333333314" id="b3x-K9-rfo"/>
+                            <constraint firstAttribute="bottom" secondItem="gl7-0q-BU1" secondAttribute="bottom" id="4M8-AJ-dSf"/>
+                            <constraint firstItem="4qR-Af-tM4" firstAttribute="trailing" secondItem="gl7-0q-BU1" secondAttribute="trailing" id="hHE-2N-p4b"/>
+                            <constraint firstItem="gl7-0q-BU1" firstAttribute="top" secondItem="8nx-Kz-tx3" secondAttribute="top" id="sBH-ld-aQX"/>
+                            <constraint firstItem="gl7-0q-BU1" firstAttribute="leading" secondItem="4qR-Af-tM4" secondAttribute="leading" id="xr7-Xw-Waz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="m4e-oh-nlq"/>
+                    <connections>
+                        <outlet property="zooCategoryTableView" destination="gl7-0q-BU1" id="PRI-ym-Jhy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pLN-Xj-Jgr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1245" y="-906"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Pak-L9-5WB">
-            <objects>
-                <viewController id="Iu9-Vk-GYc" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="aVj-J6-WWX">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="0EU-2x-PHV"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="v5f-pq-EM8"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="B4s-DT-RSP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2196" y="-906"/>
         </scene>
         <!--ZooCategoryInfoNavigationController-->
         <scene sceneID="SMM-jE-Fys">
@@ -152,7 +130,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBrownColor">
-            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
