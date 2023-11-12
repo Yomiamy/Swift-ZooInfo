@@ -44,7 +44,7 @@ class ZooCategoryVC: UIViewController {
     }
     
     private func initObserver() {
-        self.viewMode.zooCategoryItems.observe(owner: self) { (zooCategoryItems:[ZooCategoryInfoItem]?) in
+        self.viewMode.zooCategoryItems.observe(owner: self) { [unowned self] (zooCategoryItems:[ZooCategoryInfoItem]?) in
             self.loadingIndicatorView.isHidden = true
             self.refreshController.endRefreshing()
             
@@ -57,7 +57,7 @@ class ZooCategoryVC: UIViewController {
             self.zooCategoryTableView.reloadData()
         }
         
-        self.viewMode.error.observe(owner: self) { errorTuple in
+        self.viewMode.error.observe(owner: self) { [unowned self] errorTuple in
             self.loadingIndicatorView.isHidden = true
             self.refreshController.endRefreshing()
             
@@ -80,7 +80,7 @@ class ZooCategoryVC: UIViewController {
     }
     
     @objc private func reload() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [unowned self] in
             self.initData(isReload: true)
         }
     }

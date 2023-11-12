@@ -16,9 +16,9 @@ class ZooCategoryViewModel {
     private let repository: ZooCategoryRepository = ZooCategoryRepository()
     
     func fetchZooCategory() {
-        repository.fetchZooCategory { zooCategoryInfoItems in
+        repository.fetchZooCategory { [unowned self] zooCategoryInfoItems in
             self.zooCategoryItems.data = zooCategoryInfoItems
-        } onFail: { error in
+        } onFail: { [unowned self] error in
             self.error.data = (error.errorCode, error.errorDescription)
         }
     }
