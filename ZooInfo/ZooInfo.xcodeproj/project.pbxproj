@@ -201,21 +201,21 @@
 		CCCE2B522AFF3D3700AD33BB /* view */ = {
 			isa = PBXGroup;
 			children = (
+				CCCE2B562AFF3E8400AD33BB /* ZooCategoryItemCell.xib */,
 				CCCE2B532AFF3D5B00AD33BB /* ZooCategoryVC.swift */,
 				CCCE2B552AFF3E8400AD33BB /* ZooCategoryItemCell.swift */,
-				CCCE2B562AFF3E8400AD33BB /* ZooCategoryItemCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
 		};
-		CCCE2B632AFFDB3100AD33BB /* ZoomCategory */ = {
+		CCCE2B632AFFDB3100AD33BB /* ZooCategory */ = {
 			isa = PBXGroup;
 			children = (
 				CCCE2B522AFF3D3700AD33BB /* view */,
 				CCCE2B512AFF3D3000AD33BB /* viewmodel */,
 				CCCE2B502AFF3D2900AD33BB /* repository */,
 			);
-			path = ZoomCategory;
+			path = ZooCategory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
