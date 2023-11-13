@@ -14,12 +14,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         UINavigationBar.appearance().prefersLargeTitles = true
-        UINavigationBar.appearance().barTintColor = UIColor.systemBrown
-        UINavigationBar.appearance().backgroundColor = UIColor.white
+        UINavigationBar.appearance().barTintColor = #colorLiteral(red: 0.5058823824, green: 0.3372549117, blue: 0.06666667014, alpha: 1)
+        UINavigationBar.appearance().backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         
         UITabBar.appearance().tintColor = UIColor.white
-        UITabBar.appearance().barTintColor = UIColor.systemBrown
-        UITabBar.appearance().backgroundColor = UIColor.systemBrown
+        UITabBar.appearance().unselectedItemTintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        UITabBar.appearance().barTintColor = #colorLiteral(red: 0.5058823824, green: 0.3372549117, blue: 0.06666667014, alpha: 1)
+        UITabBar.appearance().backgroundColor = #colorLiteral(red: 0.5058823824, green: 0.3372549117, blue: 0.06666667014, alpha: 1)
         
         return true
     }
