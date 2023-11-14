@@ -10,6 +10,7 @@ import ETBinding
 
 class ZooCategoryVC: UIViewController {
     
+    private static let SEGUE_ID = "goToSummary"
     private static let CELL_ID = "zoo_category_item_cell"
     
     @IBOutlet weak var zooCategoryTableView: UITableView!
@@ -28,15 +29,35 @@ class ZooCategoryVC: UIViewController {
         initData(isReload: false)
     }
     
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender data: Any?) {
+        guard let destinationVC = segue.destination as? ZooSummaryVC, 
+                let selectedIndexPath = self.zooCategoryTableView.indexPathForSelectedRow else {
+            
+            return
+        }
+        
+        let zooCategoryInfoItem = self.zooCategoryItems[selectedIndexPath.row]
+        self.zooCategoryTableView.deselectRow(at: selectedIndexPath, animated: true)
+        
+        destinationVC.picUrl = zooCategoryInfoItem.ePicURL
+        destinationVC.category = zooCategoryInfoItem.eCategory
+        destinationVC.info = zooCategoryInfoItem.eInfo
+    }
+    
     private func initView() {
         self.navigationItem.title = "臺北市立動物園"
         
+        // 初始Loading Indicator
         self.loadingIndicatorView.style = .large
         self.loadingIndicatorView.startAnimating()
         
+        // 初始RefreshController
         self.refreshController.attributedTitle = NSAttributedString(string:  "刷新中...")
         self.refreshController.addTarget(self, action: #selector(reload), for: .valueChanged)
         
+        // 初始TableView
         self.zooCategoryTableView.addSubview(refreshController)
         self.zooCategoryTableView.register(UINib(nibName: "\(ZooCategoryItemCell.self)", bundle: nil), forCellReuseIdentifier: ZooCategoryVC.CELL_ID)
         self.zooCategoryTableView.dataSource = self
@@ -106,6 +127,6 @@ extension ZooCategoryVC: UITableViewDataSource, UITableViewDelegate {
     
     // MARK: - UITableViewDataSource
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: ZooCategoryVC.SEGUE_ID, sender: nil)
     }
 }

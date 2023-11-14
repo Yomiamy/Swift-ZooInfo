@@ -21,6 +21,7 @@
 		CC51BD722AFE606900BC7402 /* AllZooInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC51BD712AFE606900BC7402 /* AllZooInfo.swift */; };
 		CC51BD742AFE607E00BC7402 /* ZooCategoryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC51BD732AFE607E00BC7402 /* ZooCategoryInfo.swift */; };
 		CC51BD772AFE60A600BC7402 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC51BD762AFE60A600BC7402 /* Api.swift */; };
+		CC9540A42B01DE3F00D051A5 /* Tabman in Frameworks */ = {isa = PBXBuildFile; productRef = CC9540A32B01DE3F00D051A5 /* Tabman */; };
 		CCCE2B542AFF3D5B00AD33BB /* ZooCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCE2B532AFF3D5B00AD33BB /* ZooCategoryVC.swift */; };
 		CCCE2B572AFF3E8400AD33BB /* ZooCategoryItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCE2B552AFF3E8400AD33BB /* ZooCategoryItemCell.swift */; };
 		CCCE2B582AFF3E8400AD33BB /* ZooCategoryItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCCE2B562AFF3E8400AD33BB /* ZooCategoryItemCell.xib */; };
@@ -28,6 +29,10 @@
 		CCCE2B5D2AFF813200AD33BB /* ZooCategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCE2B5C2AFF813200AD33BB /* ZooCategoryViewModel.swift */; };
 		CCCE2B5F2AFF814200AD33BB /* ZooCategoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCE2B5E2AFF814200AD33BB /* ZooCategoryRepository.swift */; };
 		CCCE2B622AFF884400AD33BB /* ETBinding in Frameworks */ = {isa = PBXBuildFile; productRef = CCCE2B612AFF884400AD33BB /* ETBinding */; };
+		CCCF6CCA2B023D9F00E49CEC /* ZooSummaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCF6CC92B023D9F00E49CEC /* ZooSummaryVC.swift */; };
+		CCCF6CD12B02416D00E49CEC /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCF6CD02B02416D00E49CEC /* UIColor+Extension.swift */; };
+		CCCF6CD42B024AC300E49CEC /* ZooSummaryItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCF6CD22B024AC200E49CEC /* ZooSummaryItemCell.swift */; };
+		CCCF6CD52B024AC300E49CEC /* ZooSummaryItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCCF6CD32B024AC200E49CEC /* ZooSummaryItemCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +75,10 @@
 		CCCE2B562AFF3E8400AD33BB /* ZooCategoryItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZooCategoryItemCell.xib; sourceTree = "<group>"; };
 		CCCE2B5C2AFF813200AD33BB /* ZooCategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooCategoryViewModel.swift; sourceTree = "<group>"; };
 		CCCE2B5E2AFF814200AD33BB /* ZooCategoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooCategoryRepository.swift; sourceTree = "<group>"; };
+		CCCF6CC92B023D9F00E49CEC /* ZooSummaryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooSummaryVC.swift; sourceTree = "<group>"; };
+		CCCF6CD02B02416D00E49CEC /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		CCCF6CD22B024AC200E49CEC /* ZooSummaryItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZooSummaryItemCell.swift; sourceTree = "<group>"; };
+		CCCF6CD32B024AC200E49CEC /* ZooSummaryItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZooSummaryItemCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +91,7 @@
 				CC51BD6B2AFE5FB600BC7402 /* Moya in Frameworks */,
 				CC51BD692AFE5FB600BC7402 /* CombineMoya in Frameworks */,
 				CCCE2B622AFF884400AD33BB /* ETBinding in Frameworks */,
+				CC9540A42B01DE3F00D051A5 /* Tabman in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,6 +138,7 @@
 				CC6F0AD82AFE9DC200EBB32D /* ZooInfo.entitlements */,
 				CC51BD702AFE604700BC7402 /* Api */,
 				CC51BD782AFE61B000BC7402 /* Flow */,
+				CCCF6CCE2B02412700E49CEC /* Util */,
 				CC51BD372AFE5F5A00BC7402 /* AppDelegate.swift */,
 				CC51BD392AFE5F5A00BC7402 /* SceneDelegate.swift */,
 				CC51BD3B2AFE5F5A00BC7402 /* ViewController.swift */,
@@ -177,9 +188,20 @@
 			isa = PBXGroup;
 			children = (
 				CC51BD3D2AFE5F5A00BC7402 /* Main.storyboard */,
-				CCCE2B632AFFDB3100AD33BB /* ZoomCategory */,
+				CCCE2B632AFFDB3100AD33BB /* ZooCategory */,
+				CC9540A12B01DD5D00D051A5 /* ZooSummary */,
 			);
 			path = Flow;
+			sourceTree = "<group>";
+		};
+		CC9540A12B01DD5D00D051A5 /* ZooSummary */ = {
+			isa = PBXGroup;
+			children = (
+				CCCF6CC62B023D3600E49CEC /* View */,
+				CCCF6CC72B023D6F00E49CEC /* ViewModel */,
+				CCCF6CC82B023D7B00E49CEC /* Repository */,
+			);
+			path = ZooSummary;
 			sourceTree = "<group>";
 		};
 		CCCE2B502AFF3D2900AD33BB /* repository */ = {
@@ -218,6 +240,46 @@
 			path = ZooCategory;
 			sourceTree = "<group>";
 		};
+		CCCF6CC62B023D3600E49CEC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CCCF6CD32B024AC200E49CEC /* ZooSummaryItemCell.xib */,
+				CCCF6CD22B024AC200E49CEC /* ZooSummaryItemCell.swift */,
+				CCCF6CC92B023D9F00E49CEC /* ZooSummaryVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CCCF6CC72B023D6F00E49CEC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CCCF6CC82B023D7B00E49CEC /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		CCCF6CCE2B02412700E49CEC /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				CCCF6CCF2B02413400E49CEC /* Extension */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		CCCF6CCF2B02413400E49CEC /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CCCF6CD02B02416D00E49CEC /* UIColor+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -240,6 +302,7 @@
 				CC51BD6C2AFE5FB600BC7402 /* RxMoya */,
 				CCCE2B5A2AFF3E9400AD33BB /* Kingfisher */,
 				CCCE2B612AFF884400AD33BB /* ETBinding */,
+				CC9540A32B01DE3F00D051A5 /* Tabman */,
 			);
 			productName = ZooInfo;
 			productReference = CC51BD342AFE5F5A00BC7402 /* ZooInfo.app */;
@@ -317,6 +380,7 @@
 				CC51BD672AFE5FB600BC7402 /* XCRemoteSwiftPackageReference "Moya" */,
 				CCCE2B592AFF3E9400AD33BB /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				CCCE2B602AFF884400AD33BB /* XCRemoteSwiftPackageReference "ETBinding" */,
+				CC9540A22B01DE3F00D051A5 /* XCRemoteSwiftPackageReference "Tabman" */,
 			);
 			productRefGroup = CC51BD352AFE5F5A00BC7402 /* Products */;
 			projectDirPath = "";
@@ -335,6 +399,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC51BD442AFE5F5B00BC7402 /* LaunchScreen.storyboard in Resources */,
+				CCCF6CD52B024AC300E49CEC /* ZooSummaryItemCell.xib in Resources */,
 				CCCE2B582AFF3E8400AD33BB /* ZooCategoryItemCell.xib in Resources */,
 				CC51BD412AFE5F5B00BC7402 /* Assets.xcassets in Resources */,
 				CC51BD3F2AFE5F5A00BC7402 /* Main.storyboard in Resources */,
@@ -365,11 +430,14 @@
 				CC51BD772AFE60A600BC7402 /* Api.swift in Sources */,
 				CCCE2B542AFF3D5B00AD33BB /* ZooCategoryVC.swift in Sources */,
 				CC51BD722AFE606900BC7402 /* AllZooInfo.swift in Sources */,
+				CCCF6CD12B02416D00E49CEC /* UIColor+Extension.swift in Sources */,
 				CC51BD382AFE5F5A00BC7402 /* AppDelegate.swift in Sources */,
 				CC51BD742AFE607E00BC7402 /* ZooCategoryInfo.swift in Sources */,
 				CCCE2B5F2AFF814200AD33BB /* ZooCategoryRepository.swift in Sources */,
 				CCCE2B572AFF3E8400AD33BB /* ZooCategoryItemCell.swift in Sources */,
+				CCCF6CD42B024AC300E49CEC /* ZooSummaryItemCell.swift in Sources */,
 				CC51BD3A2AFE5F5A00BC7402 /* SceneDelegate.swift in Sources */,
+				CCCF6CCA2B023D9F00E49CEC /* ZooSummaryVC.swift in Sources */,
 				CCCE2B5D2AFF813200AD33BB /* ZooCategoryViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -737,6 +805,14 @@
 				minimumVersion = 15.0.3;
 			};
 		};
+		CC9540A22B01DE3F00D051A5 /* XCRemoteSwiftPackageReference "Tabman" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/uias/Tabman";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.2;
+			};
+		};
 		CCCE2B592AFF3E9400AD33BB /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher";
@@ -770,6 +846,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CC51BD672AFE5FB600BC7402 /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = RxMoya;
+		};
+		CC9540A32B01DE3F00D051A5 /* Tabman */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CC9540A22B01DE3F00D051A5 /* XCRemoteSwiftPackageReference "Tabman" */;
+			productName = Tabman;
 		};
 		CCCE2B5A2AFF3E9400AD33BB /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;

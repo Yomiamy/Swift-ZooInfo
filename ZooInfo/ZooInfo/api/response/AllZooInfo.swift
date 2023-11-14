@@ -16,10 +16,10 @@ struct AllZooInfoResult: Codable {
     let offset: Int
     let count: Int
     let sort: String
-    let results: [ZooInfo]
+    let results: [ZooInfoItem]
 }
 
-struct ZooInfo: Codable {
+struct ZooInfoItem: Codable {
     let id: Int
     let aNameCh: String
     let aNameEn: String
