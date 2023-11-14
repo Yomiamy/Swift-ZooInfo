@@ -110,6 +110,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch_image" translatesAutoresizingMaskIntoConstraints="NO" id="aJh-NG-3FE" userLabel="PicImageView">
+                                <rect key="frame" x="0.0" y="94" width="375" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="9El-Ir-IGo"/>
+                                </constraints>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Fg-G8-NTG" userLabel="TabLayoutView">
                                 <rect key="frame" x="0.0" y="294" width="375" height="518"/>
                                 <subviews>
@@ -214,10 +220,6 @@
                                             <constraint firstItem="8Zd-VF-2vl" firstAttribute="height" secondItem="1zL-eh-9M3" secondAttribute="height" id="z5T-3P-GHo"/>
                                         </constraints>
                                     </stackView>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="rSn-ib-F69" userLabel="ItemTableView">
-                                        <rect key="frame" x="0.0" y="40" width="375" height="478"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    </tableView>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zpD-Kf-mFk">
                                         <rect key="frame" x="0.0" y="40" width="375" height="478"/>
                                         <subviews>
@@ -269,6 +271,10 @@
                                         <viewLayoutGuide key="contentLayoutGuide" id="R2V-rT-spw"/>
                                         <viewLayoutGuide key="frameLayoutGuide" id="vIs-rD-cxS"/>
                                     </scrollView>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="rSn-ib-F69" userLabel="ItemTableView">
+                                        <rect key="frame" x="0.0" y="40" width="375" height="478"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="zpD-Kf-mFk" firstAttribute="top" secondItem="1zL-eh-9M3" secondAttribute="bottom" id="3lb-iw-cIY"/>
@@ -284,18 +290,17 @@
                                     <constraint firstAttribute="trailing" secondItem="rSn-ib-F69" secondAttribute="trailing" id="irh-FD-tLW"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch_image" translatesAutoresizingMaskIntoConstraints="NO" id="aJh-NG-3FE" userLabel="PicImageView">
-                                <rect key="frame" x="0.0" y="94" width="375" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="9El-Ir-IGo"/>
-                                </constraints>
-                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="i78-iq-ZU7" userLabel="LoadingIndicatorView">
+                                <rect key="frame" x="177.66666666666666" y="401.66666666666669" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Odx-wd-Pg3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="i78-iq-ZU7" firstAttribute="centerX" secondItem="Odx-wd-Pg3" secondAttribute="centerX" id="03O-h7-VOU"/>
                             <constraint firstItem="Odx-wd-Pg3" firstAttribute="trailing" secondItem="aJh-NG-3FE" secondAttribute="trailing" id="0Im-ws-clV"/>
                             <constraint firstItem="aJh-NG-3FE" firstAttribute="top" secondItem="Odx-wd-Pg3" secondAttribute="top" id="5hL-mR-tZy"/>
+                            <constraint firstItem="i78-iq-ZU7" firstAttribute="centerY" secondItem="Odx-wd-Pg3" secondAttribute="centerY" id="D4P-c1-gBJ"/>
                             <constraint firstItem="6Fg-G8-NTG" firstAttribute="leading" secondItem="Odx-wd-Pg3" secondAttribute="leading" id="HfU-It-bJi"/>
                             <constraint firstItem="6Fg-G8-NTG" firstAttribute="trailing" secondItem="Odx-wd-Pg3" secondAttribute="trailing" id="gMg-sI-kq4"/>
                             <constraint firstItem="6Fg-G8-NTG" firstAttribute="top" secondItem="aJh-NG-3FE" secondAttribute="bottom" id="geh-uw-AZn"/>
@@ -306,9 +311,10 @@
                     <navigationItem key="navigationItem" id="8Zg-MQ-T12"/>
                     <connections>
                         <outlet property="categoryInfoView" destination="Aem-3e-gfm" id="u9F-Sf-rqX"/>
-                        <outlet property="categoryLabel" destination="yLX-di-YyU" id="oq8-aA-Kk5"/>
                         <outlet property="infoLabel" destination="Qca-Yf-Vii" id="YB1-BV-Xvv"/>
                         <outlet property="itemTableView" destination="rSn-ib-F69" id="7m0-g3-79T"/>
+                        <outlet property="loadingIndicatorView" destination="i78-iq-ZU7" id="VlB-as-r1C"/>
+                        <outlet property="nameLabel" destination="yLX-di-YyU" id="oq8-aA-Kk5"/>
                         <outlet property="picImageView" destination="aJh-NG-3FE" id="k28-Hs-Ljb"/>
                         <outletCollection property="tabTitles" destination="Ece-9V-uyj" collectionClass="NSMutableArray" id="fCx-bn-3hd"/>
                         <outletCollection property="tabTitles" destination="37D-DM-JcO" collectionClass="NSMutableArray" id="MCi-Ea-z6P"/>

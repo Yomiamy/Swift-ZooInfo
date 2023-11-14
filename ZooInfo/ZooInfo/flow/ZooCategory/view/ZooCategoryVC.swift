@@ -56,7 +56,7 @@ class ZooCategoryVC: UIViewController {
         // 隱藏TabBar當Push到下一頁時
         destinationVC.hidesBottomBarWhenPushed = true
         destinationVC.picUrl = zooCategoryInfoItem.ePicURL
-        destinationVC.category = zooCategoryInfoItem.eCategory
+        destinationVC.name = zooCategoryInfoItem.eName
         destinationVC.info = zooCategoryInfoItem.eInfo
     }
     

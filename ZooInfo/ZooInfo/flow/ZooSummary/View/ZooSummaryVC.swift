@@ -17,14 +17,18 @@ class ZooSummaryVC: UIViewController {
     @IBOutlet var tabIndicators: [UIView]!
     @IBOutlet weak var itemTableView: UITableView!
     @IBOutlet weak var categoryInfoView: UIView!
-    @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var infoLabel: UILabel!
+    @IBOutlet var loadingIndicatorView: UIActivityIndicatorView!
     
     var picUrl:String!
-    var category:String!
+    var name:String!
     var info:String!
     
-    private var zooInfoItems: [ZooInfoItem] = []
+    private let viewMode: ZooSummaryViewModel = ZooSummaryViewModel()
+    private var animalInfoItems: [AnimalInfoItem] = []
+    private var plantInfoItems: [PlantInfoItem] = []
+    private var isAnimalOrPlant = 0 // 0: Animal, 1: Plant
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,9 +39,13 @@ class ZooSummaryVC: UIViewController {
     }
     
     func initView() {
+        // 初始Loading Indicator
+        self.loadingIndicatorView.style = .large
+        self.loadingIndicatorView.startAnimating()
+        
         // 初始外部參數內容
         self.picImageView.kf.setImage(with: URL(string: self.picUrl))
-        self.categoryLabel.text = self.category
+        self.nameLabel.text = self.name
         self.infoLabel.text = self.info
         
         // 初始點選第一個tab
@@ -50,9 +58,32 @@ class ZooSummaryVC: UIViewController {
         self.itemTableView.delegate = self
     }
     
-    func initObserver() {}
+    func initObserver() {
+        self.viewMode.animalInfoItems.observe(owner: self) { [unowned self] (animalInfoItems:[AnimalInfoItem]?) in
+            guard animalInfoItems != nil else {
+                print("animalInfoItems is nil")
+                return
+            }
+            
+            self.animalInfoItems = animalInfoItems!
+        }
+        
+        self.viewMode.plantInfoItems.observe(owner: self) { [unowned self] (plantInfoItems:[PlantInfoItem]?) in
+            self.loadingIndicatorView.isHidden = true
+            
+            guard plantInfoItems != nil else {
+                print("animalInfoItems is nil")
+                return
+            }
+            
+            self.plantInfoItems = plantInfoItems!
+        }
+    }
     
-    func initData() {}
+    func initData() {
+        self.loadingIndicatorView.isHidden = false
+        self.viewMode.fetchAllInfo(location: self.name)
+    }
     
     private func resetTab() {
         tabTitles.forEach { tabTitle in
@@ -84,8 +115,9 @@ class ZooSummaryVC: UIViewController {
         self.tabTitles[1].textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         self.tabIndicators[1].isHidden = false
         self.itemTableView.isHidden = false
+        self.isAnimalOrPlant = 0
         
-        print("")
+        self.itemTableView.reloadData()
     }
     
     
@@ -94,8 +126,9 @@ class ZooSummaryVC: UIViewController {
         self.tabTitles[2].textColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         self.tabIndicators[2].isHidden = false
         self.itemTableView.isHidden = false
+        self.isAnimalOrPlant = 1
         
-        print("")
+        self.itemTableView.reloadData()
     }
 }
 
@@ -103,23 +136,27 @@ class ZooSummaryVC: UIViewController {
 extension ZooSummaryVC: UITableViewDataSource, UITableViewDelegate {
     // MARK: - UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        self.zooCategoryItems.count
-        // TODO: No data
-        0
-        
+        self.isAnimalOrPlant == 0 ? self.animalInfoItems.count : self.plantInfoItems.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ZooSummaryVC.CELL_ID, for: indexPath) as? ZooSummaryItemCell else { fatalError("Init cell fail") }
         
-        let infoItem = self.zooInfoItems[indexPath.row]
-        // TODO: Need double check data format
-        cell.update(picUrl: infoItem.aPic01URL,
-                    name: infoItem.aNameCh,
-                    info: infoItem.aSummary,
-                    memo: infoItem.aPhylum)
-        
-        return cell
+        if(self.isAnimalOrPlant == 0) {
+            let infoItem = self.animalInfoItems[indexPath.row]
+            cell.update(picUrl: infoItem.aPic01URL,
+                        name: infoItem.aNameCh,
+                        info: infoItem.aFeature,
+                        memo: infoItem.aFamily)
+            return cell
+        } else {
+            let infoItem = self.plantInfoItems[indexPath.row]
+            cell.update(picUrl: infoItem.fPic01URL,
+                        name: infoItem.fNameCh,
+                        info: infoItem.fFeature,
+                        memo: infoItem.fFamily)
+            return cell
+        }
     }
     
     // MARK: - UITableViewDataSource

@@ -7,19 +7,19 @@
 
 import Foundation
 
-struct AllZooInfo: Codable {
-    let result: AllZooInfoResult
+class AllAnimalInfo: Codable {
+    let result: AllAnimalInfoResult
 }
 
-struct AllZooInfoResult: Codable {
+class AllAnimalInfoResult: Codable {
     let limit: Int
     let offset: Int
     let count: Int
     let sort: String
-    let results: [ZooInfoItem]
+    let results: [AnimalInfoItem]
 }
 
-struct ZooInfoItem: Codable {
+class AnimalInfoItem: Codable {
     let id: Int
     let aNameCh: String
     let aNameEn: String
@@ -38,13 +38,13 @@ struct ZooInfoItem: Codable {
     let aDiet: String
     let aCrisis: String
     let aPic01Alt: String
-    let aPic01URL: String
+    var aPic01URL: String
     let aPic02Alt: String
-    let aPic02URL: String
+    var aPic02URL: String
     let aPic03Alt: String
-    let aPic03URL: String
+    var aPic03URL: String
     let aPic04Alt: String
-    let aPic04URL: String
+    var aPic04URL: String
     let aVedioURL: String
     let aUpdate: String
 
