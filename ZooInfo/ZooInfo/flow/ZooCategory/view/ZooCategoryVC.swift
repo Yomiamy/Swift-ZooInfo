@@ -29,6 +29,9 @@ class ZooCategoryVC: UIViewController {
         initData(isReload: false)
     }
     
+        // 回復TabBar顯示
+        self.tabBarController?.tabBar.isHidden = false
+    }
     
     
     override func prepare(for segue: UIStoryboardSegue, sender data: Any?) {
@@ -41,6 +44,8 @@ class ZooCategoryVC: UIViewController {
         let zooCategoryInfoItem = self.zooCategoryItems[selectedIndexPath.row]
         self.zooCategoryTableView.deselectRow(at: selectedIndexPath, animated: true)
         
+        // 隱藏TabBar當Push到下一頁時
+        destinationVC.hidesBottomBarWhenPushed = true
         destinationVC.picUrl = zooCategoryInfoItem.ePicURL
         destinationVC.category = zooCategoryInfoItem.eCategory
         destinationVC.info = zooCategoryInfoItem.eInfo
