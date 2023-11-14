@@ -29,10 +29,19 @@ class ZooCategoryVC: UIViewController {
         initData(isReload: false)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.navigationController?.navigationBar.prefersLargeTitles = true
         // 回復TabBar顯示
         self.tabBarController?.tabBar.isHidden = false
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.navigationBar.prefersLargeTitles = false
+        // 避免LargeTitle切換下一頁時, Title文字短暫顯示未消失的問題
+        self.navigationController?.navigationBar.layoutIfNeeded()
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender data: Any?) {
         guard let destinationVC = segue.destination as? ZooSummaryVC, 
