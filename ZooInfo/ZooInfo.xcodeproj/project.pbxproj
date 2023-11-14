@@ -21,7 +21,6 @@
 		CC51BD722AFE606900BC7402 /* AllZooInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC51BD712AFE606900BC7402 /* AllZooInfo.swift */; };
 		CC51BD742AFE607E00BC7402 /* ZooCategoryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC51BD732AFE607E00BC7402 /* ZooCategoryInfo.swift */; };
 		CC51BD772AFE60A600BC7402 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC51BD762AFE60A600BC7402 /* Api.swift */; };
-		CC9540A42B01DE3F00D051A5 /* Tabman in Frameworks */ = {isa = PBXBuildFile; productRef = CC9540A32B01DE3F00D051A5 /* Tabman */; };
 		CCCE2B542AFF3D5B00AD33BB /* ZooCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCE2B532AFF3D5B00AD33BB /* ZooCategoryVC.swift */; };
 		CCCE2B572AFF3E8400AD33BB /* ZooCategoryItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCE2B552AFF3E8400AD33BB /* ZooCategoryItemCell.swift */; };
 		CCCE2B582AFF3E8400AD33BB /* ZooCategoryItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCCE2B562AFF3E8400AD33BB /* ZooCategoryItemCell.xib */; };
@@ -91,7 +90,6 @@
 				CC51BD6B2AFE5FB600BC7402 /* Moya in Frameworks */,
 				CC51BD692AFE5FB600BC7402 /* CombineMoya in Frameworks */,
 				CCCE2B622AFF884400AD33BB /* ETBinding in Frameworks */,
-				CC9540A42B01DE3F00D051A5 /* Tabman in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,7 +300,6 @@
 				CC51BD6C2AFE5FB600BC7402 /* RxMoya */,
 				CCCE2B5A2AFF3E9400AD33BB /* Kingfisher */,
 				CCCE2B612AFF884400AD33BB /* ETBinding */,
-				CC9540A32B01DE3F00D051A5 /* Tabman */,
 			);
 			productName = ZooInfo;
 			productReference = CC51BD342AFE5F5A00BC7402 /* ZooInfo.app */;
@@ -380,7 +377,6 @@
 				CC51BD672AFE5FB600BC7402 /* XCRemoteSwiftPackageReference "Moya" */,
 				CCCE2B592AFF3E9400AD33BB /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				CCCE2B602AFF884400AD33BB /* XCRemoteSwiftPackageReference "ETBinding" */,
-				CC9540A22B01DE3F00D051A5 /* XCRemoteSwiftPackageReference "Tabman" */,
 			);
 			productRefGroup = CC51BD352AFE5F5A00BC7402 /* Products */;
 			projectDirPath = "";
@@ -805,14 +801,6 @@
 				minimumVersion = 15.0.3;
 			};
 		};
-		CC9540A22B01DE3F00D051A5 /* XCRemoteSwiftPackageReference "Tabman" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/uias/Tabman";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.0.2;
-			};
-		};
 		CCCE2B592AFF3E9400AD33BB /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher";
@@ -846,11 +834,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CC51BD672AFE5FB600BC7402 /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = RxMoya;
-		};
-		CC9540A32B01DE3F00D051A5 /* Tabman */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CC9540A22B01DE3F00D051A5 /* XCRemoteSwiftPackageReference "Tabman" */;
-			productName = Tabman;
 		};
 		CCCE2B5A2AFF3E9400AD33BB /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
