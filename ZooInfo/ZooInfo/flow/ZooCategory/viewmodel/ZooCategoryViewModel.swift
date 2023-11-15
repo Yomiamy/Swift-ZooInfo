@@ -11,7 +11,7 @@ import ETBinding
 class ZooCategoryViewModel {
     
     var zooCategoryItems: LiveData<[ZooCategoryInfoItem]?> = LiveData(data: nil)
-    var error: LiveData<(Int, String?)?> = LiveData(data: nil)
+    var error: LiveData<String?> = LiveData(data: nil)
     
     private let repository: ZooCategoryRepository = ZooCategoryRepository()
     
@@ -19,7 +19,7 @@ class ZooCategoryViewModel {
         repository.fetchZooCategory { [unowned self] zooCategoryInfoItems in
             self.zooCategoryItems.data = zooCategoryInfoItems
         } onFail: { [unowned self] error in
-            self.error.data = (error.errorCode, error.errorDescription)
+            self.error.data = error.localizedDescription
         }
     }
 }

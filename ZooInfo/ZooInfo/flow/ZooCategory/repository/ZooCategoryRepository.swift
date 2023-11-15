@@ -7,23 +7,24 @@
 
 import Foundation
 import Moya
+import RxMoya
+import RxSwift
 
 class ZooCategoryRepository {
     
-   func fetchZooCategory(onSuccess: @escaping ([ZooCategoryInfoItem]?) -> (),
-                          onFail: @escaping (MoyaError) -> ()) {
-        ApiProvider.request(.fetchCategoryInfo) { result in
-            switch(result) {
-            case let .success(response):
+    func fetchZooCategory(onSuccess: @escaping ([ZooCategoryInfoItem]?) -> (),
+                          onFail: @escaping (Error) -> ()) {
+        let _ = ApiProvider.rx.request(.fetchCategoryInfo)
+            .subscribe(on: ConcurrentDispatchQueueScheduler(qos: .background))
+            .observe(on: MainScheduler.instance)
+            .subscribe { response in
                 let zooCategoryInfoItems:[ZooCategoryInfoItem]? = try? response.map(ZooCategoryInfo.self).result.results
                 zooCategoryInfoItems?.forEach({ item in
                     item.ePicURL = item.ePicURL.replacingOccurrences(of: "http://", with: "https://")
                 })
                 onSuccess(zooCategoryInfoItems)
-            case let .failure(error):
+            } onFailure: { error in
                 onFail(error)
             }
-        }
     }
-    
 }

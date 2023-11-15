@@ -6,49 +6,41 @@
 //
 
 import Foundation
+import RxMoya
 import Moya
+import RxSwift
 
 class ZooSummaryRepository {
-    
-    func fetchAllAnimalInfo(onSuccess: @escaping ([AnimalInfoItem]?) -> (),
-                            onFail: @escaping (MoyaError) -> ()) {
-        ApiProvider.request(.fetchAllAnimalInfo) {result in
-            switch(result) {
-            case let .success(response):
-                let animalInfoItems:[AnimalInfoItem]? = try? response.map(AllAnimalInfo.self).result.results
-                
-                animalInfoItems?.forEach({ item in
+    func fetchAllInfo(onSuccess: @escaping (([AnimalInfoItem]?, [PlantInfoItem]?)) -> (),
+                      onFail: @escaping (Error) -> ()) {
+        let obs1 = ApiProvider.rx.request(.fetchAllAnimalInfo).asObservable()
+        let obs2 = ApiProvider.rx.request(.fetchAllPlantInfo).asObservable()
+        
+        let _ = Observable.zip(obs1, obs2)
+            .subscribe(on: ConcurrentDispatchQueueScheduler(qos: .background))
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { response1, response2 in
+                let animalInfoItems:[AnimalInfoItem]? = try? response1.map(AllAnimalInfo.self).result.results.map({ item in
                     item.aPic01URL = item.aPic01URL.replacingOccurrences(of: "http://", with: "https://")
                     item.aPic02URL = item.aPic02URL.replacingOccurrences(of: "http://", with: "https://")
                     item.aPic03URL = item.aPic03URL.replacingOccurrences(of: "http://", with: "https://")
                     item.aPic04URL = item.aPic04URL.replacingOccurrences(of: "http://", with: "https://")
+                    
+                    return item
                 })
                 
-                onSuccess(animalInfoItems)
-            case let .failure(error):
-                onFail(error)
-            }
-        }
-    }
-    
-    func fetchAllPlantInfo(onSuccess: @escaping ([PlantInfoItem]?) -> (),
-                           onFail: @escaping (MoyaError) -> ()) {
-        ApiProvider.request(.fetchAllPlantInfo) {result in
-            switch(result) {
-            case let .success(response):
-                let plantInfoItems:[PlantInfoItem]? = try? response.map(AllPlantInfo.self).result.results
-                
-                plantInfoItems?.forEach({ item in
+                let plantInfoItems:[PlantInfoItem]? = try? response2.map(AllPlantInfo.self).result.results.map({ item in
                     item.fPic01URL = item.fPic01URL.replacingOccurrences(of: "http://", with: "https://")
                     item.fPic02URL = item.fPic02URL.replacingOccurrences(of: "http://", with: "https://")
                     item.fPic03URL = item.fPic03URL.replacingOccurrences(of: "http://", with: "https://")
                     item.fPic04URL = item.fPic04URL.replacingOccurrences(of: "http://", with: "https://")
+                    
+                    return item
                 })
                 
-                onSuccess(plantInfoItems)
-            case let .failure(error):
+                onSuccess((animalInfoItems, plantInfoItems))
+            }, onError: { error in
                 onFail(error)
-            }
-        }
+            })
     }
 }

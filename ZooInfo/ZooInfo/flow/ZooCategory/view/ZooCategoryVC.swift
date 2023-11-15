@@ -92,15 +92,14 @@ class ZooCategoryVC: UIViewController {
             self.zooCategoryTableView.reloadData()
         }
         
-        self.viewMode.error.observe(owner: self) { [unowned self] errorTuple in
+        self.viewMode.error.observe(owner: self) { [unowned self] errorMsg in
             self.loadingIndicatorView.isHidden = true
             self.refreshController.endRefreshing()
             
-            guard errorTuple != nil else {
+            guard let errorMsg = errorMsg else {
                 return
             }
             
-            let (errorCode, errorDescription) = errorTuple!
             // TODO: Not implemented
             print("")
         }

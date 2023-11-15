@@ -59,24 +59,27 @@ class ZooSummaryVC: UIViewController {
     }
     
     func initObserver() {
-        self.viewMode.animalInfoItems.observe(owner: self) { [unowned self] (animalInfoItems:[AnimalInfoItem]?) in
-            guard animalInfoItems != nil else {
-                print("animalInfoItems is nil")
-                return
-            }
-            
-            self.animalInfoItems = animalInfoItems!
-        }
-        
-        self.viewMode.plantInfoItems.observe(owner: self) { [unowned self] (plantInfoItems:[PlantInfoItem]?) in
+        self.viewMode.infoItemsTuple.observe(owner: self) { [unowned self] animalInfoItems, plantInfoItems in
             self.loadingIndicatorView.isHidden = true
             
-            guard plantInfoItems != nil else {
-                print("animalInfoItems is nil")
+            if let animalInfoItems = animalInfoItems {
+                self.animalInfoItems = animalInfoItems
+            }
+            
+            if let plantInfoItems = plantInfoItems {
+                self.plantInfoItems = plantInfoItems
+            }
+        }
+        
+        self.viewMode.error.observe(owner: self) { [unowned self] errorMsg in
+            self.loadingIndicatorView.isHidden = true
+            
+            guard let errorMsg = errorMsg else {
                 return
             }
             
-            self.plantInfoItems = plantInfoItems!
+            // TODO: Not implemented
+            print("")
         }
     }
     
