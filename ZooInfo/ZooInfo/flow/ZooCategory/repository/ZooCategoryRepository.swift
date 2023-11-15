@@ -17,7 +17,7 @@ class ZooCategoryRepository {
             case let .success(response):
                 let zooCategoryInfoItems:[ZooCategoryInfoItem]? = try? response.map(ZooCategoryInfo.self).result.results
                 zooCategoryInfoItems?.forEach({ item in
-                    item.ePicURL = item.ePicURL.replacingOccurrences(of: "http", with: "https")
+                    item.ePicURL = item.ePicURL.replacingOccurrences(of: "http://", with: "https://")
                 })
                 onSuccess(zooCategoryInfoItems)
             case let .failure(error):

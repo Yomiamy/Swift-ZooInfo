@@ -18,10 +18,10 @@ class ZooSummaryRepository {
                 let animalInfoItems:[AnimalInfoItem]? = try? response.map(AllAnimalInfo.self).result.results
                 
                 animalInfoItems?.forEach({ item in
-                    item.aPic01URL = item.aPic01URL.replacingOccurrences(of: "http", with: "https")
-                    item.aPic02URL = item.aPic02URL.replacingOccurrences(of: "http", with: "https")
-                    item.aPic03URL = item.aPic03URL.replacingOccurrences(of: "http", with: "https")
-                    item.aPic04URL = item.aPic04URL.replacingOccurrences(of: "http", with: "https")
+                    item.aPic01URL = item.aPic01URL.replacingOccurrences(of: "http://", with: "https://")
+                    item.aPic02URL = item.aPic02URL.replacingOccurrences(of: "http://", with: "https://")
+                    item.aPic03URL = item.aPic03URL.replacingOccurrences(of: "http://", with: "https://")
+                    item.aPic04URL = item.aPic04URL.replacingOccurrences(of: "http://", with: "https://")
                 })
                 
                 onSuccess(animalInfoItems)
@@ -39,10 +39,10 @@ class ZooSummaryRepository {
                 let plantInfoItems:[PlantInfoItem]? = try? response.map(AllPlantInfo.self).result.results
                 
                 plantInfoItems?.forEach({ item in
-                    item.fPic01URL = item.fPic01URL.replacingOccurrences(of: "http", with: "https")
-                    item.fPic02URL = item.fPic02URL.replacingOccurrences(of: "http", with: "https")
-                    item.fPic03URL = item.fPic03URL.replacingOccurrences(of: "http", with: "https")
-                    item.fPic04URL = item.fPic04URL.replacingOccurrences(of: "http", with: "https")
+                    item.fPic01URL = item.fPic01URL.replacingOccurrences(of: "http://", with: "https://")
+                    item.fPic02URL = item.fPic02URL.replacingOccurrences(of: "http://", with: "https://")
+                    item.fPic03URL = item.fPic03URL.replacingOccurrences(of: "http://", with: "https://")
+                    item.fPic04URL = item.fPic04URL.replacingOccurrences(of: "http://", with: "https://")
                 })
                 
                 onSuccess(plantInfoItems)
