@@ -8,14 +8,15 @@
 import UIKit
 import ETBinding
 
-class ZooCategoryVC: UIViewController {
+class ZooCategoryVC: BaseVC<ZooCategoryViewModel, ZooCategoryRepository> {
     
+    private static let SEGUE_ID = "goToSummary"
     private static let CELL_ID = "zoo_category_item_cell"
     
     @IBOutlet weak var zooCategoryTableView: UITableView!
     @IBOutlet var loadingIndicatorView: UIActivityIndicatorView!
     
-    private let viewMode: ZooCategoryViewModel = ZooCategoryViewModel()
+    
     private var zooCategoryItems: [ZooCategoryInfoItem] = []
     private let refreshController: UIRefreshControl = UIRefreshControl()
     
@@ -28,15 +29,52 @@ class ZooCategoryVC: UIViewController {
         initData(isReload: false)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        // 回復TabBar顯示
+        self.tabBarController?.tabBar.isHidden = false
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.navigationBar.prefersLargeTitles = false
+        // 避免LargeTitle切換下一頁時, Title文字短暫顯示未消失的問題
+        self.navigationController?.navigationBar.layoutIfNeeded()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender data: Any?) {
+        guard let destinationVC = segue.destination as? ZooSummaryVC, 
+                let selectedIndexPath = self.zooCategoryTableView.indexPathForSelectedRow else {
+            
+            return
+        }
+        
+        let zooCategoryInfoItem = self.zooCategoryItems[selectedIndexPath.row]
+        self.zooCategoryTableView.deselectRow(at: selectedIndexPath, animated: true)
+        
+        // 隱藏TabBar當Push到下一頁時
+        destinationVC.hidesBottomBarWhenPushed = true
+        destinationVC.picUrl = zooCategoryInfoItem.ePicURL
+        destinationVC.name = zooCategoryInfoItem.eName
+        destinationVC.info = zooCategoryInfoItem.eInfo
+    }
+    
     private func initView() {
         self.navigationItem.title = "臺北市立動物園"
         
+        // 初始Loading Indicator
         self.loadingIndicatorView.style = .large
         self.loadingIndicatorView.startAnimating()
         
+        // 初始RefreshController
         self.refreshController.attributedTitle = NSAttributedString(string:  "刷新中...")
         self.refreshController.addTarget(self, action: #selector(reload), for: .valueChanged)
         
+        // 初始TableView
         self.zooCategoryTableView.addSubview(refreshController)
         self.zooCategoryTableView.register(UINib(nibName: "\(ZooCategoryItemCell.self)", bundle: nil), forCellReuseIdentifier: ZooCategoryVC.CELL_ID)
         self.zooCategoryTableView.dataSource = self
@@ -44,7 +82,7 @@ class ZooCategoryVC: UIViewController {
     }
     
     private func initObserver() {
-        self.viewMode.zooCategoryItems.observe(owner: self) { (zooCategoryItems:[ZooCategoryInfoItem]?) in
+        self.viewMode?.zooCategoryItems.observe(owner: self) { [unowned self] (zooCategoryItems:[ZooCategoryInfoItem]?) in
             self.loadingIndicatorView.isHidden = true
             self.refreshController.endRefreshing()
             
@@ -57,15 +95,14 @@ class ZooCategoryVC: UIViewController {
             self.zooCategoryTableView.reloadData()
         }
         
-        self.viewMode.error.observe(owner: self) { errorTuple in
+        self.viewMode?.error.observe(owner: self) { [unowned self] errorMsg in
             self.loadingIndicatorView.isHidden = true
             self.refreshController.endRefreshing()
             
-            guard errorTuple != nil else {
+            guard let errorMsg = errorMsg else {
                 return
             }
             
-            let (errorCode, errorDescription) = errorTuple!
             // TODO: Not implemented
             print("")
         }
@@ -76,11 +113,11 @@ class ZooCategoryVC: UIViewController {
             self.loadingIndicatorView.isHidden = false
             
         }
-        self.viewMode.fetchZooCategory()
+        self.viewMode?.fetchZooCategory()
     }
     
     @objc private func reload() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [unowned self] in
             self.initData(isReload: true)
         }
     }
@@ -106,6 +143,6 @@ extension ZooCategoryVC: UITableViewDataSource, UITableViewDelegate {
     
     // MARK: - UITableViewDataSource
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: ZooCategoryVC.SEGUE_ID, sender: nil)
     }
 }
