@@ -69,6 +69,8 @@ class ZooSummaryVC: UIViewController {
             if let plantInfoItems = plantInfoItems {
                 self.plantInfoItems = plantInfoItems
             }
+            
+            self.itemTableView.reloadData()
         }
         
         self.viewMode.error.observe(owner: self) { [unowned self] errorMsg in
