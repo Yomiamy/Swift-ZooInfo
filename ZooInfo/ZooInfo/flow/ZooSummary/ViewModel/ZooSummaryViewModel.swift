@@ -8,15 +8,13 @@
 import Foundation
 import ETBinding
 
-class ZooSummaryViewModel {
+class ZooSummaryViewModel : BaseViewModel<ZooSummaryRepository> {
     
     var infoItemsTuple: LiveData<([AnimalInfoItem]?, [PlantInfoItem]?)> = LiveData(data: (nil, nil))
     var error: LiveData<String?> = LiveData(data: nil)
     
-    private let repository: ZooSummaryRepository = ZooSummaryRepository()
-    
     func fetchAllInfo(location: String) {
-        repository.fetchAllInfo { [unowned self] animalInfoItems, plantInfoItems in
+        self.repository?.fetchAllInfo { [unowned self] animalInfoItems, plantInfoItems in
             let animalInfoItems = animalInfoItems?.filter({ animalInfoItem in
                 animalInfoItem.aLocation.contains(location)
             })

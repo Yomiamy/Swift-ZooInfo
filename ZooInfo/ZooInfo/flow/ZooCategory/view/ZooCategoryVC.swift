@@ -8,7 +8,7 @@
 import UIKit
 import ETBinding
 
-class ZooCategoryVC: UIViewController {
+class ZooCategoryVC: BaseVC<ZooCategoryViewModel, ZooCategoryRepository> {
     
     private static let SEGUE_ID = "goToSummary"
     private static let CELL_ID = "zoo_category_item_cell"
@@ -16,7 +16,7 @@ class ZooCategoryVC: UIViewController {
     @IBOutlet weak var zooCategoryTableView: UITableView!
     @IBOutlet var loadingIndicatorView: UIActivityIndicatorView!
     
-    private let viewMode: ZooCategoryViewModel = ZooCategoryViewModel()
+    
     private var zooCategoryItems: [ZooCategoryInfoItem] = []
     private let refreshController: UIRefreshControl = UIRefreshControl()
     
@@ -41,6 +41,9 @@ class ZooCategoryVC: UIViewController {
         self.navigationController?.navigationBar.prefersLargeTitles = false
         // 避免LargeTitle切換下一頁時, Title文字短暫顯示未消失的問題
         self.navigationController?.navigationBar.layoutIfNeeded()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender data: Any?) {
@@ -79,7 +82,7 @@ class ZooCategoryVC: UIViewController {
     }
     
     private func initObserver() {
-        self.viewMode.zooCategoryItems.observe(owner: self) { [unowned self] (zooCategoryItems:[ZooCategoryInfoItem]?) in
+        self.viewMode?.zooCategoryItems.observe(owner: self) { [unowned self] (zooCategoryItems:[ZooCategoryInfoItem]?) in
             self.loadingIndicatorView.isHidden = true
             self.refreshController.endRefreshing()
             
@@ -92,7 +95,7 @@ class ZooCategoryVC: UIViewController {
             self.zooCategoryTableView.reloadData()
         }
         
-        self.viewMode.error.observe(owner: self) { [unowned self] errorMsg in
+        self.viewMode?.error.observe(owner: self) { [unowned self] errorMsg in
             self.loadingIndicatorView.isHidden = true
             self.refreshController.endRefreshing()
             
@@ -110,7 +113,7 @@ class ZooCategoryVC: UIViewController {
             self.loadingIndicatorView.isHidden = false
             
         }
-        self.viewMode.fetchZooCategory()
+        self.viewMode?.fetchZooCategory()
     }
     
     @objc private func reload() {

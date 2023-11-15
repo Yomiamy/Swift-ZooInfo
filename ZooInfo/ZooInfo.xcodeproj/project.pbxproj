@@ -35,6 +35,9 @@
 		CCCF6CD92B03A8DE00E49CEC /* ZooSummaryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCF6CD82B03A8DE00E49CEC /* ZooSummaryRepository.swift */; };
 		CCCF6CDB2B03A8ED00E49CEC /* ZooSummaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCF6CDA2B03A8ED00E49CEC /* ZooSummaryViewModel.swift */; };
 		CCCF6CDD2B03DC4D00E49CEC /* AllPlantInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCF6CDC2B03DC4D00E49CEC /* AllPlantInfo.swift */; };
+		CCCF6CDF2B05227D00E49CEC /* BaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCF6CDE2B05227D00E49CEC /* BaseRepository.swift */; };
+		CCCF6CE12B05232700E49CEC /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCF6CE02B05232700E49CEC /* BaseViewModel.swift */; };
+		CCCF6CE32B0523B700E49CEC /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCF6CE22B0523B700E49CEC /* BaseVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +87,9 @@
 		CCCF6CD82B03A8DE00E49CEC /* ZooSummaryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooSummaryRepository.swift; sourceTree = "<group>"; };
 		CCCF6CDA2B03A8ED00E49CEC /* ZooSummaryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooSummaryViewModel.swift; sourceTree = "<group>"; };
 		CCCF6CDC2B03DC4D00E49CEC /* AllPlantInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllPlantInfo.swift; sourceTree = "<group>"; };
+		CCCF6CDE2B05227D00E49CEC /* BaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRepository.swift; sourceTree = "<group>"; };
+		CCCF6CE02B05232700E49CEC /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		CCCF6CE22B0523B700E49CEC /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +199,9 @@
 			isa = PBXGroup;
 			children = (
 				CC51BD3D2AFE5F5A00BC7402 /* Main.storyboard */,
+				CCCF6CE22B0523B700E49CEC /* BaseVC.swift */,
+				CCCF6CE02B05232700E49CEC /* BaseViewModel.swift */,
+				CCCF6CDE2B05227D00E49CEC /* BaseRepository.swift */,
 				CCCE2B632AFFDB3100AD33BB /* ZooCategory */,
 				CC9540A12B01DD5D00D051A5 /* ZooSummary */,
 			);
@@ -434,6 +443,7 @@
 			files = (
 				CC51BD772AFE60A600BC7402 /* Api.swift in Sources */,
 				CCCE2B542AFF3D5B00AD33BB /* ZooCategoryVC.swift in Sources */,
+				CCCF6CE12B05232700E49CEC /* BaseViewModel.swift in Sources */,
 				CC51BD722AFE606900BC7402 /* AllAnimalInfo.swift in Sources */,
 				CCCF6CD12B02416D00E49CEC /* UIColor+Extension.swift in Sources */,
 				CC51BD382AFE5F5A00BC7402 /* AppDelegate.swift in Sources */,
@@ -442,7 +452,9 @@
 				CCCF6CDD2B03DC4D00E49CEC /* AllPlantInfo.swift in Sources */,
 				CCCE2B572AFF3E8400AD33BB /* ZooCategoryItemCell.swift in Sources */,
 				CCCF6CD42B024AC300E49CEC /* ZooSummaryItemCell.swift in Sources */,
+				CCCF6CDF2B05227D00E49CEC /* BaseRepository.swift in Sources */,
 				CC51BD3A2AFE5F5A00BC7402 /* SceneDelegate.swift in Sources */,
+				CCCF6CE32B0523B700E49CEC /* BaseVC.swift in Sources */,
 				CCCF6CCA2B023D9F00E49CEC /* ZooSummaryVC.swift in Sources */,
 				CCCE2B5D2AFF813200AD33BB /* ZooCategoryViewModel.swift in Sources */,
 				CCCF6CDB2B03A8ED00E49CEC /* ZooSummaryViewModel.swift in Sources */,

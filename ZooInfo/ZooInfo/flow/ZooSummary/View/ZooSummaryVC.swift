@@ -8,7 +8,7 @@
 import UIKit
 import Kingfisher
 
-class ZooSummaryVC: UIViewController {
+class ZooSummaryVC: BaseVC<ZooSummaryViewModel, ZooSummaryRepository> {
     
     private static let CELL_ID = "zoo_summary_item_cell"
     
@@ -25,7 +25,6 @@ class ZooSummaryVC: UIViewController {
     var name:String!
     var info:String!
     
-    private let viewMode: ZooSummaryViewModel = ZooSummaryViewModel()
     private var animalInfoItems: [AnimalInfoItem] = []
     private var plantInfoItems: [PlantInfoItem] = []
     private var isAnimalOrPlant = 0 // 0: Animal, 1: Plant
@@ -59,7 +58,7 @@ class ZooSummaryVC: UIViewController {
     }
     
     func initObserver() {
-        self.viewMode.infoItemsTuple.observe(owner: self) { [unowned self] animalInfoItems, plantInfoItems in
+        self.viewMode?.infoItemsTuple.observe(owner: self) { [unowned self] animalInfoItems, plantInfoItems in
             self.loadingIndicatorView.isHidden = true
             
             if let animalInfoItems = animalInfoItems {
@@ -73,7 +72,7 @@ class ZooSummaryVC: UIViewController {
             self.itemTableView.reloadData()
         }
         
-        self.viewMode.error.observe(owner: self) { [unowned self] errorMsg in
+        self.viewMode?.error.observe(owner: self) { [unowned self] errorMsg in
             self.loadingIndicatorView.isHidden = true
             
             guard let errorMsg = errorMsg else {
@@ -87,7 +86,7 @@ class ZooSummaryVC: UIViewController {
     
     func initData() {
         self.loadingIndicatorView.isHidden = false
-        self.viewMode.fetchAllInfo(location: self.name)
+        self.viewMode?.fetchAllInfo(location: self.name)
     }
     
     private func resetTab() {

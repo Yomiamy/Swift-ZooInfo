@@ -10,9 +10,7 @@ import RxMoya
 import Moya
 import RxSwift
 
-class ZooSummaryRepository {
-    
-    private let disposalBag: DisposeBag = DisposeBag()
+class ZooSummaryRepository : BaseRepository {
     
     func fetchAllInfo(onSuccess: @escaping (([AnimalInfoItem]?, [PlantInfoItem]?)) -> (),
                       onFail: @escaping (Error) -> ()) {
@@ -44,6 +42,6 @@ class ZooSummaryRepository {
                 onSuccess((animalInfoItems, plantInfoItems))
             }, onError: { error in
                 onFail(error)
-            }).disposed(by: self.disposalBag)
+            }).disposed(by: self.disposalBag!)
     }
 }
