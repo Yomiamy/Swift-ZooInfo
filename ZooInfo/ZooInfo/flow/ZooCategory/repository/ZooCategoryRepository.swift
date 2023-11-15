@@ -12,6 +12,8 @@ import RxSwift
 
 class ZooCategoryRepository {
     
+    private let disposalBag: DisposeBag = DisposeBag()
+    
     func fetchZooCategory(onSuccess: @escaping ([ZooCategoryInfoItem]?) -> (),
                           onFail: @escaping (Error) -> ()) {
         let _ = ApiProvider.rx.request(.fetchCategoryInfo)
@@ -25,6 +27,6 @@ class ZooCategoryRepository {
                 onSuccess(zooCategoryInfoItems)
             } onFailure: { error in
                 onFail(error)
-            }
+            }.disposed(by: self.disposalBag)
     }
 }

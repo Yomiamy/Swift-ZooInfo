@@ -11,6 +11,9 @@ import Moya
 import RxSwift
 
 class ZooSummaryRepository {
+    
+    private let disposalBag: DisposeBag = DisposeBag()
+    
     func fetchAllInfo(onSuccess: @escaping (([AnimalInfoItem]?, [PlantInfoItem]?)) -> (),
                       onFail: @escaping (Error) -> ()) {
         let obs1 = ApiProvider.rx.request(.fetchAllAnimalInfo).asObservable()
@@ -41,6 +44,6 @@ class ZooSummaryRepository {
                 onSuccess((animalInfoItems, plantInfoItems))
             }, onError: { error in
                 onFail(error)
-            })
+            }).disposed(by: self.disposalBag)
     }
 }
