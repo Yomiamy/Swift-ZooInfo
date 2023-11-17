@@ -38,6 +38,8 @@
 		CCCF6CDF2B05227D00E49CEC /* BaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCF6CDE2B05227D00E49CEC /* BaseRepository.swift */; };
 		CCCF6CE12B05232700E49CEC /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCF6CE02B05232700E49CEC /* BaseViewModel.swift */; };
 		CCCF6CE32B0523B700E49CEC /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCF6CE22B0523B700E49CEC /* BaseVC.swift */; };
+		CCE613842B067F6700176345 /* animated_launch_icon.gif in Resources */ = {isa = PBXBuildFile; fileRef = CCE613832B067F6700176345 /* animated_launch_icon.gif */; };
+		CCE613892B076EA900176345 /* ZooAboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE613882B076EA900176345 /* ZooAboutVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +63,6 @@
 		CC51BD342AFE5F5A00BC7402 /* ZooInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZooInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC51BD372AFE5F5A00BC7402 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC51BD392AFE5F5A00BC7402 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CC51BD3B2AFE5F5A00BC7402 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CC51BD3E2AFE5F5A00BC7402 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CC51BD402AFE5F5B00BC7402 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC51BD432AFE5F5B00BC7402 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -90,6 +91,8 @@
 		CCCF6CDE2B05227D00E49CEC /* BaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRepository.swift; sourceTree = "<group>"; };
 		CCCF6CE02B05232700E49CEC /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		CCCF6CE22B0523B700E49CEC /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		CCE613832B067F6700176345 /* animated_launch_icon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = animated_launch_icon.gif; sourceTree = "<group>"; };
+		CCE613882B076EA900176345 /* ZooAboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooAboutVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,12 +152,9 @@
 				CC51BD702AFE604700BC7402 /* Api */,
 				CC51BD782AFE61B000BC7402 /* Flow */,
 				CCCF6CCE2B02412700E49CEC /* Util */,
+				CCE613822B067E9C00176345 /* Resources */,
 				CC51BD372AFE5F5A00BC7402 /* AppDelegate.swift */,
 				CC51BD392AFE5F5A00BC7402 /* SceneDelegate.swift */,
-				CC51BD3B2AFE5F5A00BC7402 /* ViewController.swift */,
-				CC51BD402AFE5F5B00BC7402 /* Assets.xcassets */,
-				CC51BD422AFE5F5B00BC7402 /* LaunchScreen.storyboard */,
-				CC51BD452AFE5F5B00BC7402 /* Info.plist */,
 			);
 			path = ZooInfo;
 			sourceTree = "<group>";
@@ -204,6 +204,7 @@
 				CCCF6CDE2B05227D00E49CEC /* BaseRepository.swift */,
 				CCCE2B632AFFDB3100AD33BB /* ZooCategory */,
 				CC9540A12B01DD5D00D051A5 /* ZooSummary */,
+				CCE613862B076E1A00176345 /* ZooAbout */,
 			);
 			path = Flow;
 			sourceTree = "<group>";
@@ -218,38 +219,38 @@
 			path = ZooSummary;
 			sourceTree = "<group>";
 		};
-		CCCE2B502AFF3D2900AD33BB /* repository */ = {
+		CCCE2B502AFF3D2900AD33BB /* Repository */ = {
 			isa = PBXGroup;
 			children = (
 				CCCE2B5E2AFF814200AD33BB /* ZooCategoryRepository.swift */,
 			);
-			path = repository;
+			path = Repository;
 			sourceTree = "<group>";
 		};
-		CCCE2B512AFF3D3000AD33BB /* viewmodel */ = {
+		CCCE2B512AFF3D3000AD33BB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				CCCE2B5C2AFF813200AD33BB /* ZooCategoryViewModel.swift */,
 			);
-			path = viewmodel;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		CCCE2B522AFF3D3700AD33BB /* view */ = {
+		CCCE2B522AFF3D3700AD33BB /* View */ = {
 			isa = PBXGroup;
 			children = (
 				CCCE2B562AFF3E8400AD33BB /* ZooCategoryItemCell.xib */,
 				CCCE2B532AFF3D5B00AD33BB /* ZooCategoryVC.swift */,
 				CCCE2B552AFF3E8400AD33BB /* ZooCategoryItemCell.swift */,
 			);
-			path = view;
+			path = View;
 			sourceTree = "<group>";
 		};
 		CCCE2B632AFFDB3100AD33BB /* ZooCategory */ = {
 			isa = PBXGroup;
 			children = (
-				CCCE2B522AFF3D3700AD33BB /* view */,
-				CCCE2B512AFF3D3000AD33BB /* viewmodel */,
-				CCCE2B502AFF3D2900AD33BB /* repository */,
+				CCCE2B522AFF3D3700AD33BB /* View */,
+				CCCE2B512AFF3D3000AD33BB /* ViewModel */,
+				CCCE2B502AFF3D2900AD33BB /* Repository */,
 			);
 			path = ZooCategory;
 			sourceTree = "<group>";
@@ -294,6 +295,33 @@
 				CCCF6CD02B02416D00E49CEC /* UIColor+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		CCE613822B067E9C00176345 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CCE613832B067F6700176345 /* animated_launch_icon.gif */,
+				CC51BD402AFE5F5B00BC7402 /* Assets.xcassets */,
+				CC51BD422AFE5F5B00BC7402 /* LaunchScreen.storyboard */,
+				CC51BD452AFE5F5B00BC7402 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CCE613862B076E1A00176345 /* ZooAbout */ = {
+			isa = PBXGroup;
+			children = (
+				CCE613872B076E2300176345 /* View */,
+			);
+			path = ZooAbout;
+			sourceTree = "<group>";
+		};
+		CCE613872B076E2300176345 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CCE613882B076EA900176345 /* ZooAboutVC.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -415,6 +443,7 @@
 				CC51BD442AFE5F5B00BC7402 /* LaunchScreen.storyboard in Resources */,
 				CCCF6CD52B024AC300E49CEC /* ZooSummaryItemCell.xib in Resources */,
 				CCCE2B582AFF3E8400AD33BB /* ZooCategoryItemCell.xib in Resources */,
+				CCE613842B067F6700176345 /* animated_launch_icon.gif in Resources */,
 				CC51BD412AFE5F5B00BC7402 /* Assets.xcassets in Resources */,
 				CC51BD3F2AFE5F5A00BC7402 /* Main.storyboard in Resources */,
 			);
@@ -451,6 +480,7 @@
 				CCCE2B5F2AFF814200AD33BB /* ZooCategoryRepository.swift in Sources */,
 				CCCF6CDD2B03DC4D00E49CEC /* AllPlantInfo.swift in Sources */,
 				CCCE2B572AFF3E8400AD33BB /* ZooCategoryItemCell.swift in Sources */,
+				CCE613892B076EA900176345 /* ZooAboutVC.swift in Sources */,
 				CCCF6CD42B024AC300E49CEC /* ZooSummaryItemCell.swift in Sources */,
 				CCCF6CDF2B05227D00E49CEC /* BaseRepository.swift in Sources */,
 				CC51BD3A2AFE5F5A00BC7402 /* SceneDelegate.swift in Sources */,
@@ -645,7 +675,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = H2724L9BS5;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ZooInfo/Info.plist;
+				INFOPLIST_FILE = ZooInfo/Resources/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Taipei Zoo解說員\n";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -658,7 +688,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yomi.zoo-info";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -680,7 +710,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = H2724L9BS5;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ZooInfo/Info.plist;
+				INFOPLIST_FILE = ZooInfo/Resources/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Taipei Zoo解說員\n";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -693,7 +723,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yomi.zoo-info";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
