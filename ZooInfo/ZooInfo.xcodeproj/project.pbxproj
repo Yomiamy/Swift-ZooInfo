@@ -40,6 +40,7 @@
 		CCCF6CE32B0523B700E49CEC /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCF6CE22B0523B700E49CEC /* BaseVC.swift */; };
 		CCE613842B067F6700176345 /* animated_launch_icon.gif in Resources */ = {isa = PBXBuildFile; fileRef = CCE613832B067F6700176345 /* animated_launch_icon.gif */; };
 		CCE613892B076EA900176345 /* ZooAboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE613882B076EA900176345 /* ZooAboutVC.swift */; };
+		CCE613902B08FE4600176345 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCE6138F2B08FE4600176345 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		CCCF6CE22B0523B700E49CEC /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		CCE613832B067F6700176345 /* animated_launch_icon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = animated_launch_icon.gif; sourceTree = "<group>"; };
 		CCE613882B076EA900176345 /* ZooAboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooAboutVC.swift; sourceTree = "<group>"; };
+		CCE6138F2B08FE4600176345 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			files = (
 				CCCE2B5B2AFF3E9400AD33BB /* Kingfisher in Frameworks */,
 				CC51BD6D2AFE5FB600BC7402 /* RxMoya in Frameworks */,
+				CCE613902B08FE4600176345 /* WebKit.framework in Frameworks */,
 				CC51BD6B2AFE5FB600BC7402 /* Moya in Frameworks */,
 				CC51BD692AFE5FB600BC7402 /* CombineMoya in Frameworks */,
 				CCCE2B622AFF884400AD33BB /* ETBinding in Frameworks */,
@@ -132,6 +135,7 @@
 				CC51BD4D2AFE5F5C00BC7402 /* ZooInfoTests */,
 				CC51BD572AFE5F5C00BC7402 /* ZooInfoUITests */,
 				CC51BD352AFE5F5A00BC7402 /* Products */,
+				CCE6138E2B08FE4500176345 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -322,6 +326,14 @@
 				CCE613882B076EA900176345 /* ZooAboutVC.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		CCE6138E2B08FE4500176345 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CCE6138F2B08FE4600176345 /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
