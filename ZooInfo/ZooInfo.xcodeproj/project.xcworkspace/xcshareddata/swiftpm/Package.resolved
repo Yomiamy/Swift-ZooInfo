@@ -53,6 +53,15 @@
         "revision" : "9dcaa4b333db437b0fbfaf453fad29069044a8b4",
         "version" : "6.6.0"
       }
+    },
+    {
+      "identity" : "skphotobrowser",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Yomiamy/SKPhotoBrowser",
+      "state" : {
+        "branch" : "master",
+        "revision" : "fd0e07de938e1bb961c55c7c4c6d2715d4c67d0e"
+      }
     }
   ],
   "version" : 2
