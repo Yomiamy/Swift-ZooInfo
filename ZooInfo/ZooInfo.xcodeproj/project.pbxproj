@@ -40,6 +40,9 @@
 		CCCF6CE32B0523B700E49CEC /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCF6CE22B0523B700E49CEC /* BaseVC.swift */; };
 		CCE613842B067F6700176345 /* animated_launch_icon.gif in Resources */ = {isa = PBXBuildFile; fileRef = CCE613832B067F6700176345 /* animated_launch_icon.gif */; };
 		CCE613892B076EA900176345 /* ZooAboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE613882B076EA900176345 /* ZooAboutVC.swift */; };
+		CCE6138D2B08FC9000176345 /* ZooMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE6138C2B08FC9000176345 /* ZooMapVC.swift */; };
+		CCE613902B08FE4600176345 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCE6138F2B08FE4600176345 /* WebKit.framework */; };
+		CCE613932B09028D00176345 /* SKPhotoBrowser in Frameworks */ = {isa = PBXBuildFile; productRef = CCE613922B09028D00176345 /* SKPhotoBrowser */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +96,8 @@
 		CCCF6CE22B0523B700E49CEC /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		CCE613832B067F6700176345 /* animated_launch_icon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = animated_launch_icon.gif; sourceTree = "<group>"; };
 		CCE613882B076EA900176345 /* ZooAboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooAboutVC.swift; sourceTree = "<group>"; };
+		CCE6138C2B08FC9000176345 /* ZooMapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooMapVC.swift; sourceTree = "<group>"; };
+		CCE6138F2B08FE4600176345 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +105,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCE613932B09028D00176345 /* SKPhotoBrowser in Frameworks */,
 				CCCE2B5B2AFF3E9400AD33BB /* Kingfisher in Frameworks */,
 				CC51BD6D2AFE5FB600BC7402 /* RxMoya in Frameworks */,
+				CCE613902B08FE4600176345 /* WebKit.framework in Frameworks */,
 				CC51BD6B2AFE5FB600BC7402 /* Moya in Frameworks */,
 				CC51BD692AFE5FB600BC7402 /* CombineMoya in Frameworks */,
 				CCCE2B622AFF884400AD33BB /* ETBinding in Frameworks */,
@@ -132,6 +139,7 @@
 				CC51BD4D2AFE5F5C00BC7402 /* ZooInfoTests */,
 				CC51BD572AFE5F5C00BC7402 /* ZooInfoUITests */,
 				CC51BD352AFE5F5A00BC7402 /* Products */,
+				CCE6138E2B08FE4500176345 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -203,6 +211,7 @@
 				CCCF6CE02B05232700E49CEC /* BaseViewModel.swift */,
 				CCCF6CDE2B05227D00E49CEC /* BaseRepository.swift */,
 				CCCE2B632AFFDB3100AD33BB /* ZooCategory */,
+				CCE6138A2B08FC2000176345 /* ZooMap */,
 				CC9540A12B01DD5D00D051A5 /* ZooSummary */,
 				CCE613862B076E1A00176345 /* ZooAbout */,
 			);
@@ -324,6 +333,30 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		CCE6138A2B08FC2000176345 /* ZooMap */ = {
+			isa = PBXGroup;
+			children = (
+				CCE6138B2B08FC7200176345 /* View */,
+			);
+			path = ZooMap;
+			sourceTree = "<group>";
+		};
+		CCE6138B2B08FC7200176345 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CCE6138C2B08FC9000176345 /* ZooMapVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CCE6138E2B08FE4500176345 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CCE6138F2B08FE4600176345 /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -346,6 +379,7 @@
 				CC51BD6C2AFE5FB600BC7402 /* RxMoya */,
 				CCCE2B5A2AFF3E9400AD33BB /* Kingfisher */,
 				CCCE2B612AFF884400AD33BB /* ETBinding */,
+				CCE613922B09028D00176345 /* SKPhotoBrowser */,
 			);
 			productName = ZooInfo;
 			productReference = CC51BD342AFE5F5A00BC7402 /* ZooInfo.app */;
@@ -423,6 +457,7 @@
 				CC51BD672AFE5FB600BC7402 /* XCRemoteSwiftPackageReference "Moya" */,
 				CCCE2B592AFF3E9400AD33BB /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				CCCE2B602AFF884400AD33BB /* XCRemoteSwiftPackageReference "ETBinding" */,
+				CCE613912B09028D00176345 /* XCRemoteSwiftPackageReference "SKPhotoBrowser" */,
 			);
 			productRefGroup = CC51BD352AFE5F5A00BC7402 /* Products */;
 			projectDirPath = "";
@@ -482,6 +517,7 @@
 				CCCE2B572AFF3E8400AD33BB /* ZooCategoryItemCell.swift in Sources */,
 				CCE613892B076EA900176345 /* ZooAboutVC.swift in Sources */,
 				CCCF6CD42B024AC300E49CEC /* ZooSummaryItemCell.swift in Sources */,
+				CCE6138D2B08FC9000176345 /* ZooMapVC.swift in Sources */,
 				CCCF6CDF2B05227D00E49CEC /* BaseRepository.swift in Sources */,
 				CC51BD3A2AFE5F5A00BC7402 /* SceneDelegate.swift in Sources */,
 				CCCF6CE32B0523B700E49CEC /* BaseVC.swift in Sources */,
@@ -875,6 +911,14 @@
 				minimumVersion = 3.4.0;
 			};
 		};
+		CCE613912B09028D00176345 /* XCRemoteSwiftPackageReference "SKPhotoBrowser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Yomiamy/SKPhotoBrowser";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -902,6 +946,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CCCE2B602AFF884400AD33BB /* XCRemoteSwiftPackageReference "ETBinding" */;
 			productName = ETBinding;
+		};
+		CCE613922B09028D00176345 /* SKPhotoBrowser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CCE613912B09028D00176345 /* XCRemoteSwiftPackageReference "SKPhotoBrowser" */;
+			productName = SKPhotoBrowser;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
