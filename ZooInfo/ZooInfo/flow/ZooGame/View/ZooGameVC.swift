@@ -62,7 +62,13 @@ class ZooGameVC: BaseVC<ZooGameViewModel, ZooSummaryRepository> {
     
     private func initData() {
         self.loadingIndicatorView.isHidden = false
-        self.viewMode?.fetchShuffleInfoItems()
+        
+        self.selectedInfoItemIndexes.removeAll()
+        self.viewMode?.fetchCardInfo()
+    }
+    
+    @IBAction func onRetryClicked(_ sender: Any) {
+        initData()
     }
 }
 

@@ -270,12 +270,12 @@
         <scene sceneID="A5K-oO-Gu8">
             <objects>
                 <viewController id="61N-sT-aFD" userLabel="ZooGameVC - 小遊戲" customClass="ZooGameVC" customModule="ZooInfo" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="rKp-kJ-caw">
+                    <view key="view" contentMode="scaleToFill" id="rKp-kJ-caw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uIx-w2-FvA" userLabel="cardCollectionView">
-                                <rect key="frame" x="0.0" y="94" width="375" height="624"/>
+                                <rect key="frame" x="0.0" y="94" width="375" height="718"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="M3z-6m-laY">
                                     <size key="itemSize" width="128" height="128"/>
@@ -302,16 +302,20 @@
                         <viewLayoutGuide key="safeArea" id="lTv-bP-S00"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="4hA-dr-Hsw" firstAttribute="centerY" secondItem="uIx-w2-FvA" secondAttribute="centerY" id="7g8-co-Zry"/>
-                            <constraint firstItem="4hA-dr-Hsw" firstAttribute="leading" secondItem="uIx-w2-FvA" secondAttribute="trailing" constant="-375" id="AZe-Gn-d01"/>
                             <constraint firstItem="uIx-w2-FvA" firstAttribute="top" secondItem="lTv-bP-S00" secondAttribute="top" id="Ad9-Xb-wqS"/>
+                            <constraint firstAttribute="bottom" secondItem="uIx-w2-FvA" secondAttribute="bottom" id="EpV-nm-rP5"/>
                             <constraint firstItem="4hA-dr-Hsw" firstAttribute="centerX" secondItem="uIx-w2-FvA" secondAttribute="centerX" id="N5V-Bd-CBA"/>
                             <constraint firstItem="uIx-w2-FvA" firstAttribute="leading" secondItem="lTv-bP-S00" secondAttribute="leading" id="eMT-Lo-C1N"/>
-                            <constraint firstAttribute="bottom" secondItem="uIx-w2-FvA" secondAttribute="bottom" id="eiy-fX-xz7"/>
                             <constraint firstItem="lTv-bP-S00" firstAttribute="trailing" secondItem="uIx-w2-FvA" secondAttribute="trailing" id="l75-cJ-L2x"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="小遊戲" id="cFa-3d-aBW"/>
+                    <navigationItem key="navigationItem" title="小遊戲" id="cFa-3d-aBW">
+                        <barButtonItem key="rightBarButtonItem" title="再玩一次" style="plain" id="54s-7P-FyS" userLabel="retryButton">
+                            <connections>
+                                <action selector="onRetryClicked:" destination="61N-sT-aFD" id="kIC-Tg-IWD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="cardCollectionView" destination="uIx-w2-FvA" id="1Se-yH-A2G"/>
                         <outlet property="loadingIndicatorView" destination="4hA-dr-Hsw" id="FSF-vb-k2p"/>
