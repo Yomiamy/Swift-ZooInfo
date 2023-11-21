@@ -7,6 +7,7 @@
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -50,10 +51,10 @@
             </objects>
             <point key="canvasLocation" x="174" y="1383"/>
         </scene>
-        <!--關於 - ZooAboutVC -->
+        <!--ZooAboutVC - 關於-->
         <scene sceneID="02f-En-40q">
             <objects>
-                <tableViewController id="XCd-LG-02W" userLabel="關於 - ZooAboutVC " customClass="ZooAboutVC" customModule="ZooInfo" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="XCd-LG-02W" userLabel="ZooAboutVC - 關於" customClass="ZooAboutVC" customModule="ZooInfo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="insetGrouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="vW5-CQ-V5G">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -171,10 +172,10 @@
             </objects>
             <point key="canvasLocation" x="1330" y="1383"/>
         </scene>
-        <!--ZooCategoryInfoVC-->
+        <!--ZooCategoryInfoVC - 園區分類列表-->
         <scene sceneID="7bn-G7-gVt">
             <objects>
-                <viewController id="Fpu-uj-qmQ" userLabel="ZooCategoryInfoVC" customClass="ZooCategoryVC" customModule="ZooInfo" sceneMemberID="viewController">
+                <viewController id="Fpu-uj-qmQ" userLabel="ZooCategoryInfoVC - 園區分類列表" customClass="ZooCategoryVC" customModule="ZooInfo" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8nx-Kz-tx3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -245,10 +246,10 @@
             </objects>
             <point key="canvasLocation" x="1260" y="-215"/>
         </scene>
-        <!--小遊戲-->
+        <!--ZooGameNavigationController-->
         <scene sceneID="H2i-QU-PwH">
             <objects>
-                <navigationController id="p7L-E9-Rtd" sceneMemberID="viewController">
+                <navigationController id="p7L-E9-Rtd" userLabel="ZooGameNavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="小遊戲" id="lDq-wv-ERF">
                         <imageReference key="image" image="gamecontroller" catalog="system" symbolScale="medium"/>
                         <imageReference key="selectedImage" image="gamecontroller.fill" catalog="system" symbolScale="large"/>
@@ -268,23 +269,62 @@
         <!--ZooGameVC - 小遊戲-->
         <scene sceneID="A5K-oO-Gu8">
             <objects>
-                <viewController id="61N-sT-aFD" userLabel="ZooGameVC - 小遊戲" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="rKp-kJ-caw">
+                <viewController id="61N-sT-aFD" userLabel="ZooGameVC - 小遊戲" customClass="ZooGameVC" customModule="ZooInfo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="rKp-kJ-caw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uIx-w2-FvA" userLabel="cardCollectionView">
+                                <rect key="frame" x="0.0" y="94" width="375" height="624"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="M3z-6m-laY">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="S7Y-jr-8OC">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="uaV-20-es8">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" id="4hA-dr-Hsw" userLabel="LoadingIndicatorView">
+                                <rect key="frame" x="0.0" y="47" width="375" height="718"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="lTv-bP-S00"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4hA-dr-Hsw" firstAttribute="centerY" secondItem="uIx-w2-FvA" secondAttribute="centerY" id="7g8-co-Zry"/>
+                            <constraint firstItem="4hA-dr-Hsw" firstAttribute="leading" secondItem="uIx-w2-FvA" secondAttribute="trailing" constant="-375" id="AZe-Gn-d01"/>
+                            <constraint firstItem="uIx-w2-FvA" firstAttribute="top" secondItem="lTv-bP-S00" secondAttribute="top" id="Ad9-Xb-wqS"/>
+                            <constraint firstItem="4hA-dr-Hsw" firstAttribute="centerX" secondItem="uIx-w2-FvA" secondAttribute="centerX" id="N5V-Bd-CBA"/>
+                            <constraint firstItem="uIx-w2-FvA" firstAttribute="leading" secondItem="lTv-bP-S00" secondAttribute="leading" id="eMT-Lo-C1N"/>
+                            <constraint firstAttribute="bottom" secondItem="uIx-w2-FvA" secondAttribute="bottom" id="eiy-fX-xz7"/>
+                            <constraint firstItem="lTv-bP-S00" firstAttribute="trailing" secondItem="uIx-w2-FvA" secondAttribute="trailing" id="l75-cJ-L2x"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="小遊戲" id="cFa-3d-aBW"/>
+                    <connections>
+                        <outlet property="cardCollectionView" destination="uIx-w2-FvA" id="1Se-yH-A2G"/>
+                        <outlet property="loadingIndicatorView" destination="4hA-dr-Hsw" id="FSF-vb-k2p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n9K-JY-oj5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1278" y="509"/>
         </scene>
-        <!--園區分類 - ZooSummaryVC-->
+        <!--ZooSummaryVC - 園區分類詳細資訊-->
         <scene sceneID="KOa-23-zUN">
             <objects>
-                <viewController id="9eT-gq-9m7" userLabel="園區分類 - ZooSummaryVC" customClass="ZooSummaryVC" customModule="ZooInfo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9eT-gq-9m7" userLabel="ZooSummaryVC - 園區分類詳細資訊" customClass="ZooSummaryVC" customModule="ZooInfo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MOC-o2-V5O">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
