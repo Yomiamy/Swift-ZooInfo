@@ -35,6 +35,9 @@ class ZooGameVC: BaseVC<ZooGameViewModel, ZooSummaryRepository> {
         
         initView()
         initObserver()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         initData()
     }
     

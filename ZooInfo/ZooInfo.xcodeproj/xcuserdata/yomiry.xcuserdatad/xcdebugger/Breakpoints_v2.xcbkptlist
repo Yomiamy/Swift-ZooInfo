@@ -140,8 +140,8 @@
             filePath = "ZooInfo/Flow/ZooGame/View/ZooGameVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
             landmarkName = "initObserver()"
             landmarkType = "7">
             <Locations>
@@ -315,8 +315,8 @@
             filePath = "ZooInfo/Flow/ZooGame/View/ZooGameVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
             landmarkName = "initObserver()"
             landmarkType = "7">
             <Locations>
@@ -363,8 +363,8 @@
             filePath = "ZooInfo/Flow/ZooGame/View/ZooGameVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "initObserver()"
             landmarkType = "7">
          </BreakpointContent>
