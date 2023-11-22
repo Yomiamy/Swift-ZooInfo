@@ -140,8 +140,8 @@
             filePath = "ZooInfo/Flow/ZooGame/View/ZooGameVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
             landmarkName = "initObserver()"
             landmarkType = "7">
             <Locations>
@@ -189,70 +189,6 @@
                   startingLineNumber = "79"
                   endingLineNumber = "79"
                   offsetFromSymbolStart = "356">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "30DC40A5-C73C-4383-B93F-A1B7A695FA8F"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ZooInfo/Flow/ZooGame/View/ZooGameVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
-            landmarkName = "viewDidDisappear(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "454AC40F-0DD6-4F4E-8E8B-56A236BAF928"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ZooInfo/Flow/ZooGame/View/ZooGameVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
-            landmarkName = "initData()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "454AC40F-0DD6-4F4E-8E8B-56A236BAF928 - 7cd0487294ff6c21"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ZooInfo.ZooGameVC.initData() -&gt; ()"
-                  moduleName = "ZooInfo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yomiry/XCode/ZooInfo/ZooInfo/ZooInfo/Flow/ZooGame/View/ZooGameVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "91"
-                  endingLineNumber = "91"
-                  offsetFromSymbolStart = "92">
-               </Location>
-               <Location
-                  uuid = "454AC40F-0DD6-4F4E-8E8B-56A236BAF928 - 7cd0487294ff6c42"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ZooInfo.ZooGameVC.initData() -&gt; ()"
-                  moduleName = "ZooInfo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yomiry/XCode/ZooInfo/ZooInfo/ZooInfo/Flow/ZooGame/View/ZooGameVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "90"
-                  endingLineNumber = "90"
-                  offsetFromSymbolStart = "268">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -379,8 +315,8 @@
             filePath = "ZooInfo/Flow/ZooGame/View/ZooGameVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
             landmarkName = "initObserver()"
             landmarkType = "7">
             <Locations>
@@ -420,102 +356,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "DBA350A9-EE95-4F2D-AFCA-EAA6BCF1BEE5"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ZooInfo/Flow/ZooGame/View/ZooGameVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
-            landmarkName = "resetStatus()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "DBA350A9-EE95-4F2D-AFCA-EAA6BCF1BEE5 - a63258ab8975495f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ZooInfo.ZooGameVC.resetStatus() -&gt; ()"
-                  moduleName = "ZooInfo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yomiry/XCode/ZooInfo/ZooInfo/ZooInfo/Flow/ZooGame/View/ZooGameVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "105"
-                  endingLineNumber = "105"
-                  offsetFromSymbolStart = "852">
-               </Location>
-               <Location
-                  uuid = "DBA350A9-EE95-4F2D-AFCA-EAA6BCF1BEE5 - a63258ab8975497e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ZooInfo.ZooGameVC.resetStatus() -&gt; ()"
-                  moduleName = "ZooInfo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yomiry/XCode/ZooInfo/ZooInfo/ZooInfo/Flow/ZooGame/View/ZooGameVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "106"
-                  endingLineNumber = "106"
-                  offsetFromSymbolStart = "816">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E13A9678-7474-42FC-9782-6319DA90710A"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ZooInfo/Flow/ZooGame/View/ZooGameVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
-            landmarkName = "onRetryClicked(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "E13A9678-7474-42FC-9782-6319DA90710A - b9492d6b385c8f72"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ZooInfo.ZooGameVC.onRetryClicked(Any) -&gt; ()"
-                  moduleName = "ZooInfo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yomiry/XCode/ZooInfo/ZooInfo/ZooInfo/Flow/ZooGame/View/ZooGameVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "109"
-                  endingLineNumber = "109"
-                  offsetFromSymbolStart = "36">
-               </Location>
-               <Location
-                  uuid = "E13A9678-7474-42FC-9782-6319DA90710A - b9492d6b385c8f95"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ZooInfo.ZooGameVC.onRetryClicked(Any) -&gt; ()"
-                  moduleName = "ZooInfo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yomiry/XCode/ZooInfo/ZooInfo/ZooInfo/Flow/ZooGame/View/ZooGameVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "108"
-                  endingLineNumber = "108"
-                  offsetFromSymbolStart = "48">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "C12FE83D-16D7-4B66-AE1B-23B88AF7517B"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -523,42 +363,10 @@
             filePath = "ZooInfo/Flow/ZooGame/View/ZooGameVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "initObserver()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "C12FE83D-16D7-4B66-AE1B-23B88AF7517B - ead531b76a2b30f1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ZooInfo.ZooGameVC.initObserver() -&gt; ()"
-                  moduleName = "ZooInfo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yomiry/XCode/ZooInfo/ZooInfo/ZooInfo/Flow/ZooGame/View/ZooGameVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "57"
-                  endingLineNumber = "57"
-                  offsetFromSymbolStart = "36">
-               </Location>
-               <Location
-                  uuid = "C12FE83D-16D7-4B66-AE1B-23B88AF7517B - e7e6e5f575998c76"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;Any&gt;&gt;) -&gt; () in ZooInfo.ZooGameVC.initObserver() -&gt; ()"
-                  moduleName = "ZooInfo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/yomiry/XCode/ZooInfo/ZooInfo/ZooInfo/Flow/ZooGame/View/ZooGameVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "57"
-                  endingLineNumber = "57"
-                  offsetFromSymbolStart = "120">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
