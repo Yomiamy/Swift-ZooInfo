@@ -36,6 +36,10 @@ class ZooGameVC: BaseVC<ZooGameViewModel, ZooSummaryRepository> {
         initData()
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        self.resetStatus()
+    }
+    
     private func initView() {
         // 初始Loading Indicator
         self.loadingIndicatorView.style = .large
