@@ -43,6 +43,11 @@
 		CCE6138D2B08FC9000176345 /* ZooMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE6138C2B08FC9000176345 /* ZooMapVC.swift */; };
 		CCE613902B08FE4600176345 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCE6138F2B08FE4600176345 /* WebKit.framework */; };
 		CCE613932B09028D00176345 /* SKPhotoBrowser in Frameworks */ = {isa = PBXBuildFile; productRef = CCE613922B09028D00176345 /* SKPhotoBrowser */; };
+		CCE613992B0BD13400176345 /* ZooGameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE613982B0BD13400176345 /* ZooGameVC.swift */; };
+		CCE6139B2B0BD14A00176345 /* ZooGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE6139A2B0BD14A00176345 /* ZooGameViewModel.swift */; };
+		CCE613A02B0BD46400176345 /* ZooCardItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE6139E2B0BD46400176345 /* ZooCardItemCell.swift */; };
+		CCE613A12B0BD46400176345 /* ZooCardItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCE6139F2B0BD46400176345 /* ZooCardItemCell.xib */; };
+		CCE613A32B0CD15300176345 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE613A22B0CD15300176345 /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,16 +68,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CC51BD342AFE5F5A00BC7402 /* ZooInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZooInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC51BD342AFE5F5A00BC7402 /* ZooInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = ZooInfo.app; path = "/Users/yomiry/XCode/ZooInfo/ZooInfo/build/Debug-iphoneos/ZooInfo.app"; sourceTree = "<absolute>"; };
 		CC51BD372AFE5F5A00BC7402 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC51BD392AFE5F5A00BC7402 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CC51BD3E2AFE5F5A00BC7402 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CC51BD402AFE5F5B00BC7402 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC51BD432AFE5F5B00BC7402 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC51BD452AFE5F5B00BC7402 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CC51BD4A2AFE5F5C00BC7402 /* ZooInfoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZooInfoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC51BD4A2AFE5F5C00BC7402 /* ZooInfoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = ZooInfoTests.xctest; path = "/Users/yomiry/XCode/ZooInfo/ZooInfo/build/Debug-iphoneos/ZooInfoTests.xctest"; sourceTree = "<absolute>"; };
 		CC51BD4E2AFE5F5C00BC7402 /* ZooInfoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooInfoTests.swift; sourceTree = "<group>"; };
-		CC51BD542AFE5F5C00BC7402 /* ZooInfoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZooInfoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC51BD542AFE5F5C00BC7402 /* ZooInfoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = ZooInfoUITests.xctest; path = "/Users/yomiry/XCode/ZooInfo/ZooInfo/build/Debug-iphoneos/ZooInfoUITests.xctest"; sourceTree = "<absolute>"; };
 		CC51BD582AFE5F5C00BC7402 /* ZooInfoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooInfoUITests.swift; sourceTree = "<group>"; };
 		CC51BD5A2AFE5F5C00BC7402 /* ZooInfoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooInfoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CC51BD712AFE606900BC7402 /* AllAnimalInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAnimalInfo.swift; sourceTree = "<group>"; };
@@ -98,6 +103,11 @@
 		CCE613882B076EA900176345 /* ZooAboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooAboutVC.swift; sourceTree = "<group>"; };
 		CCE6138C2B08FC9000176345 /* ZooMapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooMapVC.swift; sourceTree = "<group>"; };
 		CCE6138F2B08FE4600176345 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		CCE613982B0BD13400176345 /* ZooGameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooGameVC.swift; sourceTree = "<group>"; };
+		CCE6139A2B0BD14A00176345 /* ZooGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooGameViewModel.swift; sourceTree = "<group>"; };
+		CCE6139E2B0BD46400176345 /* ZooCardItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooCardItemCell.swift; sourceTree = "<group>"; };
+		CCE6139F2B0BD46400176345 /* ZooCardItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZooCardItemCell.xib; sourceTree = "<group>"; };
+		CCE613A22B0CD15300176345 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,19 +148,8 @@
 				CC51BD362AFE5F5A00BC7402 /* ZooInfo */,
 				CC51BD4D2AFE5F5C00BC7402 /* ZooInfoTests */,
 				CC51BD572AFE5F5C00BC7402 /* ZooInfoUITests */,
-				CC51BD352AFE5F5A00BC7402 /* Products */,
 				CCE6138E2B08FE4500176345 /* Frameworks */,
 			);
-			sourceTree = "<group>";
-		};
-		CC51BD352AFE5F5A00BC7402 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				CC51BD342AFE5F5A00BC7402 /* ZooInfo.app */,
-				CC51BD4A2AFE5F5C00BC7402 /* ZooInfoTests.xctest */,
-				CC51BD542AFE5F5C00BC7402 /* ZooInfoUITests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		CC51BD362AFE5F5A00BC7402 /* ZooInfo */ = {
@@ -211,8 +210,9 @@
 				CCCF6CE02B05232700E49CEC /* BaseViewModel.swift */,
 				CCCF6CDE2B05227D00E49CEC /* BaseRepository.swift */,
 				CCCE2B632AFFDB3100AD33BB /* ZooCategory */,
-				CCE6138A2B08FC2000176345 /* ZooMap */,
 				CC9540A12B01DD5D00D051A5 /* ZooSummary */,
+				CCE6138A2B08FC2000176345 /* ZooMap */,
+				CCE613942B0BD0EB00176345 /* ZooGame */,
 				CCE613862B076E1A00176345 /* ZooAbout */,
 			);
 			path = Flow;
@@ -294,6 +294,7 @@
 			isa = PBXGroup;
 			children = (
 				CCCF6CCF2B02413400E49CEC /* Extension */,
+				CCE613A22B0CD15300176345 /* Utils.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -355,6 +356,33 @@
 				CCE6138F2B08FE4600176345 /* WebKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CCE613942B0BD0EB00176345 /* ZooGame */ = {
+			isa = PBXGroup;
+			children = (
+				CCE613952B0BD0FD00176345 /* View */,
+				CCE613962B0BD10200176345 /* ViewModel */,
+			);
+			path = ZooGame;
+			sourceTree = "<group>";
+		};
+		CCE613952B0BD0FD00176345 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CCE613982B0BD13400176345 /* ZooGameVC.swift */,
+				CCE6139E2B0BD46400176345 /* ZooCardItemCell.swift */,
+				CCE6139F2B0BD46400176345 /* ZooCardItemCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CCE613962B0BD10200176345 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CCE6139A2B0BD14A00176345 /* ZooGameViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -459,7 +487,7 @@
 				CCCE2B602AFF884400AD33BB /* XCRemoteSwiftPackageReference "ETBinding" */,
 				CCE613912B09028D00176345 /* XCRemoteSwiftPackageReference "SKPhotoBrowser" */,
 			);
-			productRefGroup = CC51BD352AFE5F5A00BC7402 /* Products */;
+			productRefGroup = CC51BD2B2AFE5F5A00BC7402;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -481,6 +509,7 @@
 				CCE613842B067F6700176345 /* animated_launch_icon.gif in Resources */,
 				CC51BD412AFE5F5B00BC7402 /* Assets.xcassets in Resources */,
 				CC51BD3F2AFE5F5A00BC7402 /* Main.storyboard in Resources */,
+				CCE613A12B0BD46400176345 /* ZooCardItemCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,6 +529,7 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+
 /* Begin PBXSourcesBuildPhase section */
 		CC51BD302AFE5F5A00BC7402 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -508,6 +538,7 @@
 				CC51BD772AFE60A600BC7402 /* Api.swift in Sources */,
 				CCCE2B542AFF3D5B00AD33BB /* ZooCategoryVC.swift in Sources */,
 				CCCF6CE12B05232700E49CEC /* BaseViewModel.swift in Sources */,
+				CCE6139B2B0BD14A00176345 /* ZooGameViewModel.swift in Sources */,
 				CC51BD722AFE606900BC7402 /* AllAnimalInfo.swift in Sources */,
 				CCCF6CD12B02416D00E49CEC /* UIColor+Extension.swift in Sources */,
 				CC51BD382AFE5F5A00BC7402 /* AppDelegate.swift in Sources */,
@@ -520,11 +551,14 @@
 				CCE6138D2B08FC9000176345 /* ZooMapVC.swift in Sources */,
 				CCCF6CDF2B05227D00E49CEC /* BaseRepository.swift in Sources */,
 				CC51BD3A2AFE5F5A00BC7402 /* SceneDelegate.swift in Sources */,
+				CCE613A02B0BD46400176345 /* ZooCardItemCell.swift in Sources */,
 				CCCF6CE32B0523B700E49CEC /* BaseVC.swift in Sources */,
 				CCCF6CCA2B023D9F00E49CEC /* ZooSummaryVC.swift in Sources */,
 				CCCE2B5D2AFF813200AD33BB /* ZooCategoryViewModel.swift in Sources */,
 				CCCF6CDB2B03A8ED00E49CEC /* ZooSummaryViewModel.swift in Sources */,
 				CCCF6CD92B03A8DE00E49CEC /* ZooSummaryRepository.swift in Sources */,
+				CCE613992B0BD13400176345 /* ZooGameVC.swift in Sources */,
+				CCE613A32B0CD15300176345 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

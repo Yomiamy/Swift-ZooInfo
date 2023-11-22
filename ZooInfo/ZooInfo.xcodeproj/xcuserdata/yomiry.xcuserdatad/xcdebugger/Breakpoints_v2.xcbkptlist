@@ -52,5 +52,53 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "77438D18-8C30-420E-81B7-6458A46646B6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ZooInfo/Flow/ZooGame/ViewModel/ZooGameViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "selectShuffleInfoItems()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "77438D18-8C30-420E-81B7-6458A46646B6 - 35471c28525e154d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ZooInfo.ZooGameViewModel.selectShuffleInfoItems() -&gt; ()"
+                  moduleName = "ZooInfo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yomiry/XCode/ZooInfo/ZooInfo/ZooInfo/Flow/ZooGame/ViewModel/ZooGameViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "936">
+               </Location>
+               <Location
+                  uuid = "77438D18-8C30-420E-81B7-6458A46646B6 - 35471c28525e154d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ZooInfo.ZooGameViewModel.selectShuffleInfoItems() -&gt; ()"
+                  moduleName = "ZooInfo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yomiry/XCode/ZooInfo/ZooInfo/ZooInfo/Flow/ZooGame/ViewModel/ZooGameViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "1312">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
