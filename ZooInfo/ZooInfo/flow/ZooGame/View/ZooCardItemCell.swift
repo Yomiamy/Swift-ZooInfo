@@ -15,11 +15,16 @@ class ZooCardItemCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-
-    func update(isSelected:Bool, picUrl: String) {
-        self.defaultCardImageView.isHidden = isSelected
+    
+    func update(isNewOpened:Bool, isNeedOpen:Bool, isPaired:Bool, name:String, picUrl: String) {
+        self.defaultCardImageView.isHidden = isNeedOpen || isPaired
         
+        self.realCardImageView.isHidden = isPaired
         self.realCardImageView.contentMode = .scaleAspectFill
         self.realCardImageView.kf.setImage(with: URL(string: picUrl))
+        
+        if(isNewOpened) {
+            Utils.speechText(text: name)
+        }
     }
 }
