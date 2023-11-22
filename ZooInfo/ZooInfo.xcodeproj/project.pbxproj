@@ -68,22 +68,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CC51BD342AFE5F5A00BC7402 /* ZooInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = ZooInfo.app; path = "/Users/yomiry/XCode/ZooInfo/ZooInfo/build/Debug-iphoneos/ZooInfo.app"; sourceTree = "<absolute>"; };
 		CC51BD372AFE5F5A00BC7402 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC51BD392AFE5F5A00BC7402 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CC51BD3E2AFE5F5A00BC7402 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CC51BD402AFE5F5B00BC7402 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC51BD432AFE5F5B00BC7402 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC51BD452AFE5F5B00BC7402 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CC51BD4A2AFE5F5C00BC7402 /* ZooInfoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = ZooInfoTests.xctest; path = "/Users/yomiry/XCode/ZooInfo/ZooInfo/build/Debug-iphoneos/ZooInfoTests.xctest"; sourceTree = "<absolute>"; };
 		CC51BD4E2AFE5F5C00BC7402 /* ZooInfoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooInfoTests.swift; sourceTree = "<group>"; };
-		CC51BD542AFE5F5C00BC7402 /* ZooInfoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = ZooInfoUITests.xctest; path = "/Users/yomiry/XCode/ZooInfo/ZooInfo/build/Debug-iphoneos/ZooInfoUITests.xctest"; sourceTree = "<absolute>"; };
 		CC51BD582AFE5F5C00BC7402 /* ZooInfoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooInfoUITests.swift; sourceTree = "<group>"; };
 		CC51BD5A2AFE5F5C00BC7402 /* ZooInfoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooInfoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CC51BD712AFE606900BC7402 /* AllAnimalInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllAnimalInfo.swift; sourceTree = "<group>"; };
 		CC51BD732AFE607E00BC7402 /* ZooCategoryInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooCategoryInfo.swift; sourceTree = "<group>"; };
 		CC51BD762AFE60A600BC7402 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		CC6F0AD82AFE9DC200EBB32D /* ZooInfo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ZooInfo.entitlements; sourceTree = "<group>"; };
+		CC91BF2C2B0E090B008BDEE2 /* ZooInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZooInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC91BF2D2B0E090B008BDEE2 /* ZooInfoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = ZooInfoTests.xctest; path = "/Users/yomiry/XCode/ZooInfo/ZooInfo/build/Debug-iphoneos/ZooInfoTests.xctest"; sourceTree = "<absolute>"; };
+		CC91BF2E2B0E090B008BDEE2 /* ZooInfoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = ZooInfoUITests.xctest; path = "/Users/yomiry/XCode/ZooInfo/ZooInfo/build/Debug-iphoneos/ZooInfoUITests.xctest"; sourceTree = "<absolute>"; };
 		CCCE2B532AFF3D5B00AD33BB /* ZooCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooCategoryVC.swift; sourceTree = "<group>"; };
 		CCCE2B552AFF3E8400AD33BB /* ZooCategoryItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZooCategoryItemCell.swift; sourceTree = "<group>"; };
 		CCCE2B562AFF3E8400AD33BB /* ZooCategoryItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZooCategoryItemCell.xib; sourceTree = "<group>"; };
@@ -149,6 +149,7 @@
 				CC51BD4D2AFE5F5C00BC7402 /* ZooInfoTests */,
 				CC51BD572AFE5F5C00BC7402 /* ZooInfoUITests */,
 				CCE6138E2B08FE4500176345 /* Frameworks */,
+				CC91BF2C2B0E090B008BDEE2 /* ZooInfo.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -410,7 +411,7 @@
 				CCE613922B09028D00176345 /* SKPhotoBrowser */,
 			);
 			productName = ZooInfo;
-			productReference = CC51BD342AFE5F5A00BC7402 /* ZooInfo.app */;
+			productReference = CC91BF2C2B0E090B008BDEE2 /* ZooInfo.app */;
 			productType = "com.apple.product-type.application";
 		};
 		CC51BD492AFE5F5C00BC7402 /* ZooInfoTests */ = {
@@ -428,7 +429,7 @@
 			);
 			name = ZooInfoTests;
 			productName = ZooInfoTests;
-			productReference = CC51BD4A2AFE5F5C00BC7402 /* ZooInfoTests.xctest */;
+			productReference = CC91BF2D2B0E090B008BDEE2 /* ZooInfoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		CC51BD532AFE5F5C00BC7402 /* ZooInfoUITests */ = {
@@ -446,7 +447,7 @@
 			);
 			name = ZooInfoUITests;
 			productName = ZooInfoUITests;
-			productReference = CC51BD542AFE5F5C00BC7402 /* ZooInfoUITests.xctest */;
+			productReference = CC91BF2E2B0E090B008BDEE2 /* ZooInfoUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -528,7 +529,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
 
 /* Begin PBXSourcesBuildPhase section */
 		CC51BD302AFE5F5A00BC7402 /* Sources */ = {

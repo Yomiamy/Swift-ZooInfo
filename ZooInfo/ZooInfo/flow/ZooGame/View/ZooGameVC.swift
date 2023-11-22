@@ -27,13 +27,22 @@ class ZooGameVC: BaseVC<ZooGameViewModel, ZooSummaryRepository> {
     private var pairedInfoItemIndexes = Array<Int>()
     // 最新被翻開牌的索引
     private var newOpenedIndex: Int? = nil
+    // 是否可點擊項目
+    private var isItemSelectable: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         initView()
         initObserver()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         initData()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        self.resetStatus()
     }
     
     private func initView() {
@@ -49,12 +58,13 @@ class ZooGameVC: BaseVC<ZooGameViewModel, ZooSummaryRepository> {
     
     private func initObserver() {
         self.viewMode?.selectedInfoItems.observe(owner: self) { infoItems in
+            self.loadingIndicatorView.isHidden = true
+            
             if let infoItems = infoItems {
                 self.infoItems = infoItems
             }
             self.cardCollectionView.reloadData()
             
-            self.loadingIndicatorView.isHidden = true
             self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { timer in
                 self.timeCounterInSec += 1
                 
@@ -78,18 +88,25 @@ class ZooGameVC: BaseVC<ZooGameViewModel, ZooSummaryRepository> {
     }
     
     private func initData() {
-        self.timer?.invalidate()
-        self.timeCounterInSec = 0
+        self.resetStatus()
+        
+        self.loadingIndicatorView.isHidden = false
+        self.viewMode?.fetchCardInfo()
+    }
+    
+    private func resetStatus() {
+        self.loadingIndicatorView.isHidden = true
+        self.isItemSelectable = true
         self.newOpenedIndex = nil
+        
         self.openedInfoItemIndexes.removeAll()
         self.pairedInfoItemIndexes.removeAll()
         self.infoItems.removeAll()
         self.cardCollectionView.reloadData()
         
+        self.timeCounterInSec = 0
+        self.timer?.invalidate()
         self.timerLabel.text = "計時:00:00"
-        
-        self.loadingIndicatorView.isHidden = false
-        self.viewMode?.fetchCardInfo()
     }
     
     @IBAction func onRetryClicked(_ sender: Any) {
@@ -98,6 +115,7 @@ class ZooGameVC: BaseVC<ZooGameViewModel, ZooSummaryRepository> {
 }
 
 extension ZooGameVC: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    // MARK: - UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         self.infoItems.count
     }
@@ -140,14 +158,7 @@ extension ZooGameVC: UICollectionViewDataSource, UICollectionViewDelegate, UICol
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout
-        let gapSpace = flowLayout.sectionInset.left + flowLayout.sectionInset.right + (flowLayout.minimumInteritemSpacing * CGFloat(ZooGameVC.NO_OF_CELL_IN_ROW - 1))
-        let size = (collectionView.bounds.width - gapSpace) / CGFloat(ZooGameVC.NO_OF_CELL_IN_ROW)
-        
-        return CGSize(width: size, height: size)
-    }
-    
+    // MARK: - UICollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // 檢查是否已選過或已配對
         guard !self.openedInfoItemIndexes.contains(indexPath.row), !self.pairedInfoItemIndexes.contains(indexPath.row) else {
@@ -167,16 +178,17 @@ extension ZooGameVC: UICollectionViewDataSource, UICollectionViewDelegate, UICol
             self.openedInfoItemIndexes.append(indexPath.row)
             self.cardCollectionView.reloadData()
             
+            self.isItemSelectable = false
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                guard let oldSelectedIndex = oldOpenedIndex else {
+                guard let oldOpenedIndex = oldOpenedIndex, let newOpenedIndex = self.newOpenedIndex else {
                     return
                 }
                 
-                let isSameInfo = self.viewMode?.checkIsSameInfo(item1: self.infoItems[self.newOpenedIndex!], item2: self.infoItems[oldSelectedIndex]) ?? false
+                let isSameInfo = self.viewMode?.checkIsSameInfo(item1: self.infoItems[newOpenedIndex], item2: self.infoItems[oldOpenedIndex]) ?? false
                 
                 if isSameInfo {
                     self.pairedInfoItemIndexes.append(self.newOpenedIndex!)
-                    self.pairedInfoItemIndexes.append(oldSelectedIndex)
+                    self.pairedInfoItemIndexes.append(oldOpenedIndex)
                     
                     // 全配對完則停止
                     if(self.pairedInfoItemIndexes.count == self.infoItems.count) {
@@ -185,12 +197,26 @@ extension ZooGameVC: UICollectionViewDataSource, UICollectionViewDelegate, UICol
                 }
                 
                 self.openedInfoItemIndexes.removeAll { index in
-                    index == oldSelectedIndex || index == self.newOpenedIndex!
+                    index == oldOpenedIndex || index == newOpenedIndex
                 }
                 
+                self.isItemSelectable = true
                 self.newOpenedIndex = nil
                 self.cardCollectionView.reloadData()
             }
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        self.isItemSelectable
+    }
+    
+    // MARK: - UICollectionViewDelegateFlowLayout
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout
+        let gapSpace = flowLayout.sectionInset.left + flowLayout.sectionInset.right + (flowLayout.minimumInteritemSpacing * CGFloat(ZooGameVC.NO_OF_CELL_IN_ROW - 1))
+        let size = (collectionView.bounds.width - gapSpace) / CGFloat(ZooGameVC.NO_OF_CELL_IN_ROW)
+        
+        return CGSize(width: size, height: size)
     }
 }
