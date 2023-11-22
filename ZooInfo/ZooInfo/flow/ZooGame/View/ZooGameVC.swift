@@ -16,8 +16,14 @@ class ZooGameVC: BaseVC<ZooGameViewModel, ZooSummaryRepository> {
     @IBOutlet weak var cardCollectionView: UICollectionView!
     @IBOutlet weak var loadingIndicatorView: UIActivityIndicatorView!
     
+    // 所有要顯示的項目
     private var infoItems = Array<Any>()
-    private var selectedInfoItemIndexes = Array<Int>()
+    // 需要被翻開牌的索引陣列
+    private var openedInfoItemIndexes = Array<Int>()
+    // 已配對相同的索引陣列
+    private var pairedInfoItemIndexes = Array<Int>()
+    // 最新被翻開牌的索引
+    private var newOpenedIndex: Int? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,11 +69,16 @@ class ZooGameVC: BaseVC<ZooGameViewModel, ZooSummaryRepository> {
     private func initData() {
         self.loadingIndicatorView.isHidden = false
         
-        self.selectedInfoItemIndexes.removeAll()
         self.viewMode?.fetchCardInfo()
     }
     
     @IBAction func onRetryClicked(_ sender: Any) {
+        self.newOpenedIndex = nil
+        self.openedInfoItemIndexes.removeAll()
+        self.pairedInfoItemIndexes.removeAll()
+        self.infoItems.removeAll()
+        self.cardCollectionView.reloadData()
+        
         initData()
     }
 }
@@ -83,19 +94,33 @@ extension ZooGameVC: UICollectionViewDataSource, UICollectionViewDelegate, UICol
         }
         
         let itemInfo = self.infoItems[indexPath.row]
-        let isSelected = selectedInfoItemIndexes.contains(indexPath.row)
+        let isNeedOpen = self.openedInfoItemIndexes.contains(indexPath.row)
+        let isNewOpened = (self.newOpenedIndex == indexPath.row)
+        let isPaired = self.pairedInfoItemIndexes.contains(indexPath.row)
         
         switch itemInfo.self {
         case is AnimalInfoItem:
             let animalInfoItem = itemInfo as! AnimalInfoItem
             
-            cell.update(isSelected: isSelected, picUrl: animalInfoItem.aPic01URL)
+            cell.update(isNewOpened: isNewOpened,
+                        isNeedOpen: isNeedOpen,
+                        isPaired: isPaired,
+                        name: animalInfoItem.aNameCh,
+                        picUrl: animalInfoItem.aPic01URL)
         case is PlantInfoItem:
             let plantInfoItem = itemInfo as! PlantInfoItem
             
-            cell.update(isSelected: isSelected, picUrl: plantInfoItem.fPic01URL)
+            cell.update(isNewOpened: isNewOpened,
+                        isNeedOpen: isNeedOpen,
+                        isPaired: isPaired,
+                        name: plantInfoItem.fNameCh,
+                        picUrl: plantInfoItem.fPic01URL)
         default:
-            cell.update(isSelected: false, picUrl: "")
+            cell.update(isNewOpened: false,
+                        isNeedOpen: false,
+                        isPaired: false,
+                        name: "",
+                        picUrl: "")
         }
         
         return cell
@@ -110,12 +135,43 @@ extension ZooGameVC: UICollectionViewDataSource, UICollectionViewDelegate, UICol
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // 檢查是否已選過
-        guard !self.selectedInfoItemIndexes.contains(indexPath.row) else {
+        // 檢查是否已選過或已配對
+        guard !self.openedInfoItemIndexes.contains(indexPath.row), !self.pairedInfoItemIndexes.contains(indexPath.row) else {
             return
         }
         
-        selectedInfoItemIndexes.append(indexPath.row)
-        collectionView.reloadData()
+        
+        if newOpenedIndex == nil {
+            self.newOpenedIndex = indexPath.row
+            
+            self.openedInfoItemIndexes.append(indexPath.row)
+            self.cardCollectionView.reloadData()
+        } else {
+            let oldOpenedIndex = self.newOpenedIndex
+            self.newOpenedIndex = indexPath.row
+            
+            self.openedInfoItemIndexes.append(indexPath.row)
+            self.cardCollectionView.reloadData()
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                guard let oldSelectedIndex = oldOpenedIndex else {
+                    return
+                }
+                
+                let isSameInfo = self.viewMode?.checkIsSameInfo(item1: self.infoItems[self.newOpenedIndex!], item2: self.infoItems[oldSelectedIndex]) ?? false
+                
+                if isSameInfo {
+                    self.pairedInfoItemIndexes.append(self.newOpenedIndex!)
+                    self.pairedInfoItemIndexes.append(oldSelectedIndex)
+                }
+                
+                self.openedInfoItemIndexes.removeAll { index in
+                    index == oldSelectedIndex || index == self.newOpenedIndex!
+                }
+                
+                self.newOpenedIndex = nil
+                self.cardCollectionView.reloadData()
+            }
+        }
     }
 }

@@ -294,9 +294,8 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" id="4hA-dr-Hsw" userLabel="LoadingIndicatorView">
-                                <rect key="frame" x="0.0" y="47" width="375" height="718"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="VWE-lq-9w1" userLabel="LoadingIndicatorView">
+                                <rect key="frame" x="177.66666666666666" y="401.66666666666669" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lTv-bP-S00"/>
@@ -304,9 +303,10 @@
                         <constraints>
                             <constraint firstItem="uIx-w2-FvA" firstAttribute="top" secondItem="lTv-bP-S00" secondAttribute="top" id="Ad9-Xb-wqS"/>
                             <constraint firstAttribute="bottom" secondItem="uIx-w2-FvA" secondAttribute="bottom" id="EpV-nm-rP5"/>
-                            <constraint firstItem="4hA-dr-Hsw" firstAttribute="centerX" secondItem="uIx-w2-FvA" secondAttribute="centerX" id="N5V-Bd-CBA"/>
+                            <constraint firstItem="VWE-lq-9w1" firstAttribute="centerY" secondItem="lTv-bP-S00" secondAttribute="centerY" id="YsG-5G-G8m"/>
                             <constraint firstItem="uIx-w2-FvA" firstAttribute="leading" secondItem="lTv-bP-S00" secondAttribute="leading" id="eMT-Lo-C1N"/>
                             <constraint firstItem="lTv-bP-S00" firstAttribute="trailing" secondItem="uIx-w2-FvA" secondAttribute="trailing" id="l75-cJ-L2x"/>
+                            <constraint firstItem="VWE-lq-9w1" firstAttribute="centerX" secondItem="lTv-bP-S00" secondAttribute="centerX" id="tUt-dE-dhu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="小遊戲" id="cFa-3d-aBW">
@@ -318,7 +318,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="cardCollectionView" destination="uIx-w2-FvA" id="1Se-yH-A2G"/>
-                        <outlet property="loadingIndicatorView" destination="4hA-dr-Hsw" id="FSF-vb-k2p"/>
+                        <outlet property="loadingIndicatorView" destination="VWE-lq-9w1" id="2NC-TQ-iXe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n9K-JY-oj5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
