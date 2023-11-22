@@ -15,7 +15,10 @@ class ZooGameVC: BaseVC<ZooGameViewModel, ZooSummaryRepository> {
 
     @IBOutlet weak var cardCollectionView: UICollectionView!
     @IBOutlet weak var loadingIndicatorView: UIActivityIndicatorView!
+    @IBOutlet weak var timerLabel: UILabel!
     
+    private var timer:Timer? = nil
+    private var timeCounterInSec = 0
     // 所有要顯示的項目
     private var infoItems = Array<Any>()
     // 需要被翻開牌的索引陣列
@@ -52,6 +55,14 @@ class ZooGameVC: BaseVC<ZooGameViewModel, ZooSummaryRepository> {
             self.cardCollectionView.reloadData()
             
             self.loadingIndicatorView.isHidden = true
+            self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { timer in
+                self.timeCounterInSec += 1
+                
+                let minutes = self.timeCounterInSec / 60
+                let seconds = self.timeCounterInSec % 60
+                let counterStr = String(format: "%02d:%02d", minutes, seconds)
+                self.timerLabel.text = "計時:\(counterStr)"
+            })
         }
         
         self.viewMode?.error.observe(owner: self) { [unowned self] errorMsg in
@@ -67,18 +78,21 @@ class ZooGameVC: BaseVC<ZooGameViewModel, ZooSummaryRepository> {
     }
     
     private func initData() {
-        self.loadingIndicatorView.isHidden = false
-        
-        self.viewMode?.fetchCardInfo()
-    }
-    
-    @IBAction func onRetryClicked(_ sender: Any) {
+        self.timer?.invalidate()
+        self.timeCounterInSec = 0
         self.newOpenedIndex = nil
         self.openedInfoItemIndexes.removeAll()
         self.pairedInfoItemIndexes.removeAll()
         self.infoItems.removeAll()
         self.cardCollectionView.reloadData()
         
+        self.timerLabel.text = "計時:00:00"
+        
+        self.loadingIndicatorView.isHidden = false
+        self.viewMode?.fetchCardInfo()
+    }
+    
+    @IBAction func onRetryClicked(_ sender: Any) {
         initData()
     }
 }
@@ -163,6 +177,11 @@ extension ZooGameVC: UICollectionViewDataSource, UICollectionViewDelegate, UICol
                 if isSameInfo {
                     self.pairedInfoItemIndexes.append(self.newOpenedIndex!)
                     self.pairedInfoItemIndexes.append(oldSelectedIndex)
+                    
+                    // 全配對完則停止
+                    if(self.pairedInfoItemIndexes.count == self.infoItems.count) {
+                        self.timer?.invalidate()
+                    }
                 }
                 
                 self.openedInfoItemIndexes.removeAll { index in
