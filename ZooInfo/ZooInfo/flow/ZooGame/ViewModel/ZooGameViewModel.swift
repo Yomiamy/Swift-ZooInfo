@@ -52,11 +52,28 @@ class ZooGameViewModel: BaseViewModel<ZooSummaryRepository> {
         self.selectedInfoItems.data = selectedInfoItems.shuffled()
     }
     
+    func checkIsSameInfo(item1: Any, item2: Any) -> Bool {
+        if item1.self is AnimalInfoItem,
+           item2.self is AnimalInfoItem {
+            let animalInfoItem1 = item1 as! AnimalInfoItem
+            let animalInfoItem2 = item2 as! AnimalInfoItem
+            
+            return animalInfoItem1.aNameEn == animalInfoItem2.aNameEn
+        } else if item1.self is PlantInfoItem,
+                  item2.self is PlantInfoItem {
+            let plantInfoItem1 = item1 as! PlantInfoItem
+            let plantInfoItem2 = item2 as! PlantInfoItem
+            
+            return plantInfoItem1.fNameEn == plantInfoItem2.fNameEn
+        }
+        
+        return false
+    }
+    
     override func onClear() {
         super.onClear()
         
         self.animalInfoItems = nil
         self.plantInfoItems = nil
     }
-    
 }
