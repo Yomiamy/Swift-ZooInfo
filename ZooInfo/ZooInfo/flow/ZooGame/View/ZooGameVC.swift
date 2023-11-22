@@ -53,12 +53,13 @@ class ZooGameVC: BaseVC<ZooGameViewModel, ZooSummaryRepository> {
     
     private func initObserver() {
         self.viewMode?.selectedInfoItems.observe(owner: self) { infoItems in
+            self.loadingIndicatorView.isHidden = true
+            
             if let infoItems = infoItems {
                 self.infoItems = infoItems
             }
             self.cardCollectionView.reloadData()
             
-            self.loadingIndicatorView.isHidden = true
             self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { timer in
                 self.timeCounterInSec += 1
                 
@@ -82,6 +83,13 @@ class ZooGameVC: BaseVC<ZooGameViewModel, ZooSummaryRepository> {
     }
     
     private func initData() {
+        self.resetStatus()
+        
+        self.loadingIndicatorView.isHidden = false
+        self.viewMode?.fetchCardInfo()
+    }
+    
+    private func resetStatus() {
         self.timer?.invalidate()
         self.timeCounterInSec = 0
         self.newOpenedIndex = nil
@@ -90,10 +98,9 @@ class ZooGameVC: BaseVC<ZooGameViewModel, ZooSummaryRepository> {
         self.infoItems.removeAll()
         self.cardCollectionView.reloadData()
         
-        self.timerLabel.text = "計時:00:00"
+        self.loadingIndicatorView.isHidden = true
         
-        self.loadingIndicatorView.isHidden = false
-        self.viewMode?.fetchCardInfo()
+        self.timerLabel.text = "計時:00:00"
     }
     
     @IBAction func onRetryClicked(_ sender: Any) {
@@ -172,15 +179,15 @@ extension ZooGameVC: UICollectionViewDataSource, UICollectionViewDelegate, UICol
             self.cardCollectionView.reloadData()
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                guard let oldSelectedIndex = oldOpenedIndex else {
+                guard let oldOpenedIndex = oldOpenedIndex, let newOpenedIndex = self.newOpenedIndex else {
                     return
                 }
                 
-                let isSameInfo = self.viewMode?.checkIsSameInfo(item1: self.infoItems[self.newOpenedIndex!], item2: self.infoItems[oldSelectedIndex]) ?? false
+                let isSameInfo = self.viewMode?.checkIsSameInfo(item1: self.infoItems[newOpenedIndex], item2: self.infoItems[oldOpenedIndex]) ?? false
                 
                 if isSameInfo {
                     self.pairedInfoItemIndexes.append(self.newOpenedIndex!)
-                    self.pairedInfoItemIndexes.append(oldSelectedIndex)
+                    self.pairedInfoItemIndexes.append(oldOpenedIndex)
                     
                     // 全配對完則停止
                     if(self.pairedInfoItemIndexes.count == self.infoItems.count) {
@@ -189,7 +196,7 @@ extension ZooGameVC: UICollectionViewDataSource, UICollectionViewDelegate, UICol
                 }
                 
                 self.openedInfoItemIndexes.removeAll { index in
-                    index == oldSelectedIndex || index == self.newOpenedIndex!
+                    index == oldOpenedIndex || index == newOpenedIndex
                 }
                 
                 self.newOpenedIndex = nil
