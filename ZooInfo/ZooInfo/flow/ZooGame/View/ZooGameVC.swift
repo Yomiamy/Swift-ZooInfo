@@ -43,6 +43,7 @@ class ZooGameVC: BaseVC<ZooGameViewModel, ZooSummaryRepository> {
     
     override func viewDidDisappear(_ animated: Bool) {
         self.resetStatus()
+        self.viewMode?.onClear()
     }
     
     private func initView() {
