@@ -19,7 +19,12 @@ class AllPlantInfoResult: Codable {
 
 class PlantInfoItem: Codable {
     let id: Int
-    let fNameCh: String
+    let fNameCh1: String?
+    let fNameCh2: String?
+    var fNameCh: String {
+        // 相容處理
+        fNameCh1 != nil ? fNameCh1! : fNameCh2!
+    }
     let fSummary: String
     let fKeywords: String
     let fAlsoKnown: String
@@ -53,7 +58,8 @@ class PlantInfoItem: Codable {
 
     enum CodingKeys: String, CodingKey {
         case id = "_id"
-        case fNameCh = "\u{feff}F_Name_Ch"
+        case fNameCh1 = "\u{feff}F_Name_Ch"
+        case fNameCh2 = "F_Name_Ch"
         case fNameEn = "F_Name_En"
         case fSummary = "F_Summary"
         case fAlsoKnown = "F_AlsoKnown"
