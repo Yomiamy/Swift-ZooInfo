@@ -71,8 +71,6 @@ class ZooGameViewModel: BaseViewModel<ZooSummaryRepository> {
     }
     
     override func onClear() {
-        super.onClear()
-        
         self.animalInfoItems = nil
         self.plantInfoItems = nil
     }
