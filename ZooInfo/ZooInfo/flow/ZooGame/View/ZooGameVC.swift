@@ -193,6 +193,7 @@ extension ZooGameVC: UICollectionViewDataSource, UICollectionViewDelegate, UICol
                     
                     // 全配對完則停止
                     if(self.pairedInfoItemIndexes.count == self.infoItems.count) {
+                        self.displayAlert(title: "完成", msg: "太棒了!你已經完成所有卡片配對~")
                         self.timer?.invalidate()
                     }
                 }
