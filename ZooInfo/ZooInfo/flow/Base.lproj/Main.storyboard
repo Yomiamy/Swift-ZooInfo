@@ -172,10 +172,10 @@
             </objects>
             <point key="canvasLocation" x="1330" y="1383"/>
         </scene>
-        <!--ZooCategoryInfoVC - 園區分類列表-->
+        <!--ZooCategoryVC - 園區分類列表-->
         <scene sceneID="7bn-G7-gVt">
             <objects>
-                <viewController id="Fpu-uj-qmQ" userLabel="ZooCategoryInfoVC - 園區分類列表" customClass="ZooCategoryVC" customModule="ZooInfo" sceneMemberID="viewController">
+                <viewController id="Fpu-uj-qmQ" userLabel="ZooCategoryVC - 園區分類列表" customClass="ZooCategoryVC" customModule="ZooInfo" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8nx-Kz-tx3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
