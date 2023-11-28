@@ -752,7 +752,7 @@
 				DEVELOPMENT_TEAM = H2724L9BS5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ZooInfo/Resources/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Taipei Zoo行程導覽員\n";
+				INFOPLIST_KEY_CFBundleDisplayName = "動植物大觀園\n";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -787,7 +787,7 @@
 				DEVELOPMENT_TEAM = H2724L9BS5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ZooInfo/Resources/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Taipei Zoo行程導覽員\n";
+				INFOPLIST_KEY_CFBundleDisplayName = "動植物大觀園\n";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
