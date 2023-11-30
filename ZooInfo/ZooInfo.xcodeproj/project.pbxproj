@@ -748,11 +748,11 @@
 				CODE_SIGN_ENTITLEMENTS = ZooInfo/ZooInfo.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = H2724L9BS5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ZooInfo/Resources/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Taipei Zoo解說員\n";
+				INFOPLIST_KEY_CFBundleDisplayName = "動植物大觀園\n";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -783,11 +783,11 @@
 				CODE_SIGN_ENTITLEMENTS = ZooInfo/ZooInfo.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = H2724L9BS5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ZooInfo/Resources/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Taipei Zoo解說員\n";
+				INFOPLIST_KEY_CFBundleDisplayName = "動植物大觀園\n";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;

@@ -64,7 +64,7 @@ class ZooCategoryVC: BaseVC<ZooCategoryViewModel, ZooCategoryRepository> {
     }
     
     private func initView() {
-        self.navigationItem.title = "臺北市立動物園"
+        self.navigationItem.title = "園區分類"
         
         // 初始Loading Indicator
         self.loadingIndicatorView.style = .large
